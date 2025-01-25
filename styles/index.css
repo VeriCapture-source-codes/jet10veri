@@ -1,0 +1,81 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+  }
+  body {
+    font-family: montserrat;
+  }
+  /* Basic Styling for Desktop */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 120px;
+    width: 100%;
+  }
+  .logo img {
+    max-width: 15.51vw;
+    height: 7.84vh;
+    margin-top: 16px;
+  }
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    margin-top: 30px;
+    margin-right: 200px;
+  }
+  
+  .nav-links li a {
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 5px;
+    margin-left: 0px;
+  }
+  .submit_btn {
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #2242f5;
+    color: white;
+    font-size: 10px;
+    margin-top: -10px;
+    margin-left: 200px;
+    border: 1px solid rgb(247, 247, 247);
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  a button.submit_btn:hover {
+    background: #b0b1f0;
+    color: #272bf8;
+    transition: 0.5s;
+  }
+  
+  /* Hide the checkbox by default */
+  .menu-toggle-checkbox {
+    display: none;
+  }
+  
+  /* Mobile styling */
+  .menu-icon {
+    display: none; /* Hide menu icon on desktop */
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+
+  .G_image {
+    width: 95vw;
+    height: 85vh;
+    margin-top: 16px;
+    margin-left: 25px;
+  }
+  input.check-bar {
+    width: 20px;
+    height: 20px;
+    margin-right: 30px;
+  }
