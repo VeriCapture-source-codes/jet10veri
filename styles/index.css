@@ -12,7 +12,7 @@
 }
 body {
   font-family: "Open Sans", sans-serif;
-  background-color: #e7eff5;
+  background-color: #fff;
   color: #333;
   text-align: center;
   line-height: 1.6;
@@ -155,6 +155,263 @@ input[type="radio"]:after{
   margin-right: 20px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
+ /* section for event witnessed */
+.sub-content-text{
+  width: 20rem;
+  margin-left: 20rem;
+  margin-top: 220px;
+}
+
+h2{
+  font-size: 2.5rem;
+  font-weight: bold;
+  
+}
+
+.sub-color{
+  color:red;
+}
+
+.content-text{
+  width: 84%;
+  font-size: 0.9rem;
+  margin-left: 2.1rem;
+}
+
+.sub-content-button{
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 18px;
+  background-color: #007bff;
+  color: #fff;
+  gap: 10px;
+  border-radius: 30px;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-right: 6rem;
+}
+
+.sub-content-button:hover{
+  background-color: #0056b3;
+}
+.tweet-card{
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+  width: 21rem;
+  height: 19rem;
+  margin-left: 780px;
+  margin-top: -320px;
+}
+.tweet-header{
+  display: block;
+}
+ .tweet-header 
+ .kaycee-img {
+  width:40px;
+  height:40px;
+  border-radius: 50%;
+  margin-left: -290px;
+  margin-top: -20px;
+}
+.kstrong {
+  font-size: 12px;
+  font-weight: bold;
+  width: 100%;
+  margin-top: -45px;
+  margin-left: -75px;
+}
+
+.time{
+  width: 100%;
+  font-size: 12px;
+  color: grey;
+  margin-left: 140px;
+  margin-top: -220px;
+
+  position: relative;
+  top: -22px;
+  left: -50px;
+}
+
+.tweet-header 
+.traffic-button{
+  background-color: yellow;
+  padding: 2px 12px;
+  border: none;
+  border-radius: 15px;
+  margin: 0px -90px 0px;
+  margin-left: 170px;
+  font-weight: bold;
+  cursor: pointer;
+
+  position: relative;
+  top: -45px;
+  left: -50px;
+}
+
+.traffic-button:hover{
+  background-color: #b7950b;
+  color: #fff;
+}
+#location {
+  width: 5%;
+  margin-left: -90px;
+  margin-top: 0px;
+
+  position: relative;
+  top: -26px;
+  left: -144px;
+}
+.tweet-header 
+.awka{
+  font-size: 12px;
+  margin-top: -51px;
+  margin-left: -60px;
+}
+.fuel {
+  width: 92%;
+  font-size: 12px;
+  font-weight: 500;
+  margin-left: 22px;
+  margin-top: 10px;
+}
+.on-awka{
+  position: relative;
+  left: -38px;
+}
+.traffic{
+  font-family: 'Lexend', sans-serif;
+}
+.traffic-image{
+  width: 89%;
+  display: block;
+  margin-left: 25px;
+  margin-top: 10px;
+}
+.traffic-ratings-container{
+  display: flex;
+  justify-content: start;
+  padding: 12px 0;
+  margin-left: 10px;
+}
+.traffic-rating{
+  display: flex;
+  align-items: center;
+  cursor: default;
+  width: 95%;
+  margin-left: 20px;
+}
+
+.traffic-rating:not(:last-child){
+  margin-right: 12px;
+}
+.traffic-rating-selected > .traffic-rating-button,
+.traffic-rating-selected > .traffic-rating-count{
+  margin-right: 6px;
+  cursor: pointer;
+  color: #53f3e6;
+}
+.traffic-rating-button{
+  margin-right: 6px;
+  cursor: pointer;
+  color: #555555;
+}
+.traffic-rating:not(.traffic-rating-selected) > .traffic-rating-button:hover{
+  color: #000;
+}
+/* Map section */
+.map-section{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.map-container img{
+  width: 25rem;
+  height: auto;
+  border-radius: 10px;
+  margin-left: 150px;
+  margin-top: 80px;
+  margin-right: 50px;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+}
+
+.map-text{
+  width: 25%;
+  margin-right: 60px;
+  margin-top: 50px;
+}
+
+h4{
+  font-size: 35px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-left: -160px;
+  margin-bottom: 0px;
+}
+.highlight{
+  margin-right: 49px;
+  margin-top: 0px;
+}
+.map-content{
+  width: 13rem;
+  margin-left: -75px;
+  margin-top: 20px;
+  font-size: 11px;
+  line-height: 1.6;
+}
+.map-text 
+.what{
+  font-size: 12px;
+  margin-left: -10px;
+}
+.map-button{
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 43px;
+  background-color: #0552a5;
+  color: #fff;
+  gap: 10px;
+  border-radius: 30px;
+  border: none;
+  margin-top: 20px;
+  margin-left: -230px;
+  cursor: pointer;
+}
+
+.map-button:hover{
+  background-color: #003570;
+}
+
+/* Hero section */
+.hero{
+  margin-top: 20px;
+}
+
+.hero-text {
+  font-size:55px;
+  font-weight: 800;
+  margin-top: 40px;
+}
+
+.hero-span{
+  color: rgb(54, 173, 54);
+  font-size: 55px;
+}
+
+.hero-content{
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
 .figma {
   margin-top: -225px;
   margin-left: 670px;
@@ -225,7 +482,7 @@ input[type="radio"]:after{
 }
 .features {
   padding: 20px 20px 0px;
-  background-color: #f5f9ff;
+  background-color: #ffff;
   text-align: center;
   width: 95.3vw;
   height: 100vh;
@@ -235,10 +492,10 @@ input[type="radio"]:after{
   font-size: 30px;
 }
 .features h2 {
-  margin-top: 20px;
+  margin-top: 5px;
   margin-right: 25px;
   margin-bottom: 20px;
-  font-size: 50px;
+  font-size: 40px;
 }
 .feature-text {
   font-size: 16px;
@@ -636,7 +893,7 @@ a.forgot-pass {
 }
 .footer-social-media{
   margin-top: 0px;
-  margin-right: 115px;
+  margin-right: 30px;
   color: #fff;
 } 
 .footer-social-media img.facebook{
