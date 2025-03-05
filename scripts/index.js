@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
             };
           });
               
-rating.classList.add('post-rating-selected');
+    rating.classList.add('post-rating-selected');
           // Determine if it's a like or dislike request
           const likeOrDislike = likeRating === rating ? 'like' : 'dislike';
           console.log(`Sending ${likeOrDislike} request for traffic ID: ${trafficId}`);
@@ -65,27 +65,23 @@ rating.classList.add('post-rating-selected');
   });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+  let bx_hide = document.getElementById('bx-hide');
+  let password = document.getElementById('password');
 
-  document.addEventListener("DOMContentLoaded", function() {
-    const optionMenu = document.querySelector('.select-menu');
-    
-    if (optionMenu) {
-      const selectBtn = optionMenu.querySelector('.select-btn');
-      const options = optionMenu.querySelectorAll('.option');
-      const sBtn_text = optionMenu.querySelector('.sBtn-text');
+  bx_hide.onclick = function(){
+ if(password.type == 'password'){
+    password.type = 'text';
+    bx_hide.src = 'assets/image/bx-show.png';
+   }else{
+    password.type = 'password';
+    bx_hide.src = 'assets/image/bx-hide.png';
 
-      selectBtn.addEventListener('click', () => {
-        optionMenu.classList.toggle('active');
-      });
-
-      options.forEach(option => {
-        option.addEventListener('click', () => {
-          let selectedOption = option.querySelector('.option-text').innerText;
-          sBtn_text.innerText = selectedOption;
-          optionMenu.classList.remove('active');
-        });
-      });
-    }
-  });
+  }
+  }
+}
+);
+  
 
 
+ 
