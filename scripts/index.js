@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
               const count = rating.querySelector('.traffic-rating-count');
               count.textContent = Math.max(0, Number(count.textContent) - 1);
               rating.classList.remove('post-rating-selected');
-            };
+            }
           });
               
     rating.classList.add('post-rating-selected');
@@ -66,21 +66,24 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-  let bx_hide = document.getElementById('bx-hide');
-  let password = document.getElementById('password');
+  let bx_hides = document.querySelectorAll('#bx-hide, #bx-hide2');
+  let passwords = document.querySelectorAll('#password, #password2');
 
-  bx_hide.onclick = function(){
- if(password.type == 'password'){
-    password.type = 'text';
-    bx_hide.src = 'assets/image/bx-show.png';
-   }else{
-    password.type = 'password';
-    bx_hide.src = 'assets/image/bx-hide.png';
+  bx_hides.forEach((bx_hide, index) => {
+    bx_hide.onclick = function() {
+      let password = passwords[index]; // Get the corresponding password field
+      
+      if (password.type === 'password') {
+        password.type = 'text';
+        bx_hide.src = 'assets/image/bx-show.png';
+      } else {
+        password.type = 'password';
+        bx_hide.src = 'assets/image/bx-hide.png';
+      }
+    };
+  });
+});
 
-  }
-  }
-}
-);
   
 
 
