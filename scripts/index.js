@@ -65,6 +65,18 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+const button = document.getElementById('changeBtn');
+const body = document.body;
+
+const colors = ['black', 'green', 'blue', 'yellow', 'white'];
+
+button.addEventListener('click',changeBackground)
+
+function changeBackground(){
+const colorsIndex = Math.floor(Math.random() * colors.length);
+body.style.backgroundColor = colors[colorsIndex];
+};
+
 document.addEventListener("DOMContentLoaded", function() {
   let bx_hides = document.querySelectorAll('#bx-hide, #bx-hide2');
   let passwords = document.querySelectorAll('#password, #password2');

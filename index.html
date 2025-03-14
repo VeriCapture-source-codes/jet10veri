@@ -25,16 +25,16 @@
     
   </head>
   <body>
+    
     <!-- Navigation bar for the website -->
     <nav>
-      <!-- Logo for the website -->
-      <label class="logo">
-        <img
-          src="./assets/image/Data For  Vericapture 2.png"
-          alt="logo"
-          class="logo"
-        />
-      </label>
+     <!-- Logo for the website -->
+     <label class="logo">
+     <img 
+        src="./assets/image/Data For  Vericapture 2.png" 
+        alt="logo" 
+      />
+    </label>
 
       <!-- Checkbox for toggling the menu -->
       <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox" />
@@ -42,17 +42,15 @@
       <!-- Label acts as the hamburger icon -->
       <label for="menu-toggle" class="menu-icon">&#9776;</label>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" class="home-active">Home</a></li>
         <li><a href="realtime capture.html">RealTime Capture</a></li>
         <li><a href="map.html">Map</a></li>
         <li><a href="trending.html">Trending</a></li>
         <li><a href="about us.html">About us</a></li>
-        <li>
-          <a href="#"
-            ><button type="submit" class="submit_btn">Sign up</button></a
-          >
-        </li>
       </ul>
+      <a href="#">
+        <button type="submit" class="submit_btn">Sign up</button>
+      </a>
     </nav>
   
     <!-- Section for the main content -->
@@ -81,7 +79,8 @@
        <button type="submit" class="explore-button">
          <span>Explore</span><span><img class="scope" src="./assets/image/Vector (3).png" alt="glass"  /></span>
        </button>
-       <a href="login.html"><button class="login-button" type="submit" >
+       <a href="login.html">
+        <button class="login-button" type="submit" >
          <span>Login</span>
          <span class="logi"><img src="./assets/image/Vector (2).png" alt="lass" /></span>
        </button></a>
@@ -89,8 +88,9 @@
    </div>
    
    <!-- Section for event witnessed -->
-   <div class="sub-content-text">
-      <h2> <span class="sub-color">Check</span> before you step-out</h2>
+  
+    <div class="sub-content-text">
+      <h2 class="mass"> <span class="sub-color">Check</span> before you step-out</h2>
       <p class="content-text">
       With vericapture,you can see importants emergency updates captured by heroes on the road, who have spare their lives to save yours</p>
         
@@ -126,7 +126,6 @@
 
           </div>
         </div>
-       
       </div>
     </div>
       
@@ -138,7 +137,7 @@
      </div>
      <div class="map-text">
        <h4>See where it's <span class="highlight"> Happening</span></h4>
-       <p class="map-content">View live report, events unfolding around you, so you always know <span class="what">what's real and what's not.</span></p>
+       <p class="map-content">View live report, events unfolding around you, so you always know what's real and what's not.</p>
        <button class="map-button">Explore <img src="./assets/image/Vector (3).png" alt=""></button>
       </div>
     </div>
@@ -147,20 +146,21 @@
     <div class="hero">
       <h2 class="hero-text">Over <span class="hero-span"> 500+</span>lives Saved</h2>
       <p class="hero-content">
-        Thanks to the heros we never met</p>
-        <div class="hero-image">
+        Thanks to the heros we never met
+      </p>
+      <div class="hero-image">
         <img src="./assets/image/Frame 238.png" alt="hero">
-    </div>
-  </div>
+      </div>
+   </div>
 
    <!-- Feature container -->
-    <section class="features">
-      <h2>What We Offer</h2>
+    <section>
+      <h2 class="what-offer">What We Offer</h2>
       <p class="feature-text">
         At VeriCapture, we are committed to provide tools that empower users
         with accurate, real-time informtion they can trust. Whether during
         emergencies or trending events, our platform ensures you stay informed
-        with authentic, location-specific updates.
+        with authentic, <span class="updates">location-specific updates.</span>
       </p>
      <div class="row-mb">
       <div class="feature-item-grid-col">
@@ -207,7 +207,7 @@
       </div>
      </div>
     </section>
-  
+   
    <div class="footer">
       <div class="footer-nav">
         <a href="index.html">Home</a>
@@ -245,6 +245,9 @@
        </section>
       </div>
     </div>
-    <script src="./scripts/index.js"></script>
+    <div class="changeContainer">
+      <button id="changeBtn">Change background</button>
+    </div>
+  <script src="./scripts/index.js"></script>
   </body>
 </html>
