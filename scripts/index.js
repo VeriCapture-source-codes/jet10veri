@@ -82,9 +82,11 @@ document.addEventListener("DOMContentLoaded", function() {
   let passwords = document.querySelectorAll('#password, #password2');
 
   bx_hides.forEach((bx_hide, index) => {
+    console.log('bx_hide:', bx_hide); // Check if the element is found
     bx_hide.onclick = function() {
       let password = passwords[index]; // Get the corresponding password field
-      
+      console.log('password:', password); // Check the password field
+
       if (password.type === 'password') {
         password.type = 'text';
         bx_hide.src = 'assets/image/bx-show.png';

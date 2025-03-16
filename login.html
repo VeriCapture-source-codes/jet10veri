@@ -38,8 +38,8 @@
               
                  <a href="create.html" class="close">Create an account</a>
               </div>
-              <header>Welcome Back</header>
-              <p>Welcome back, please enter your detail</p>
+              <header class="header-welcome">Welcome Back</header>
+              <p class="welcome">Welcome back, please enter your detail</p>
               <form action="#">
                 <div class="media-options">
                   <a href="#" class="field google">
@@ -81,9 +81,9 @@
                     type="password"
                     placeholder="Password"
                     id="password"
-                    required
+                    required autocomplete="current-password"
                   />
-                  <img src="./assets/image/bx-hide.png" id="bx-hide" />
+                  <img src="./assets/image/bx-hide.png" id="bx-hide" alt="toggle visibility"/>
                 </div>
   
                 <div class="form-link">
@@ -100,5 +100,30 @@
           </div>
         </div>
       </section>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          let bx_hides = document.querySelectorAll('#bx-hide, #bx-hide2');
+          let passwords = document.querySelectorAll('#password, #password2');
+      
+          if (bx_hides.length === 0 || passwords.length === 0) {
+            console.error("Elements not found. Check your IDs.");
+          }
+      
+          bx_hides.forEach((bx_hide, index) => {
+            bx_hide.onclick = function() {
+              let password = passwords[index];
+              if (password.type === 'password') {
+                password.type = 'text';
+                bx_hide.src = 'assets/image/bx-show.png';
+              } else {
+                password.type = 'password';
+                bx_hide.src = 'assets/image/bx-hide.png';
+              }
+            };
+          });
+        });
+      </script>
+      
 </body>
 </html>
