@@ -65,17 +65,83 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-const button = document.getElementById('changeBtn');
+const darkModeToggle = document.getElementById('dark-mode-toggle'); // Select the dark mode toggle image
 const body = document.body;
+const nav = document.getElementById('nav');
+const navLinks = document.getElementById('nav-links');
+const mainContent = document.getElementById('main-content');
+const head = document.getElementById('head');
+const tweetCard = document.getElementById('tweet-card');
+const kstrong = document.getElementById('kstrong');
+const fuel = document.getElementById('fuel');
+const onAwka = document.getElementById('on-awka');
+const navLinksAnchors = navLinks.querySelectorAll('li a'); // Select all <a> tags inside <li> in nav-links
+const logo = document.querySelector('.logo img'); // Select the logo image inside the label
 
-const colors = ['black', 'green', 'blue', 'yellow', 'white'];
+const colors = ['white', 'black']; // Array of colors
+const defaultLogoSrc = './assets/image/Data For  Vericapture 2.png'; // Default logo source
+const alternateLogoSrc = './assets/image/logosss___2_-removebg-preview 1.png'; // Alternate logo source
 
-button.addEventListener('click',changeBackground)
+darkModeToggle.addEventListener('click', changeBackground); // Add click event listener to the dark mode toggle
 
-function changeBackground(){
-const colorsIndex = Math.floor(Math.random() * colors.length);
-body.style.backgroundColor = colors[colorsIndex];
-};
+function changeBackground() {
+    const colorsIndex = Math.floor(Math.random() * colors.length);
+    const selectedColor = colors[colorsIndex];
+
+    console.log('Selected Color:', selectedColor); // Debugging: Log the selected color
+
+    // Get the current background color of the body
+    const currentBgColor = window.getComputedStyle(body).backgroundColor;
+
+    // Check if the current background color is white and the new color is not white
+    if (currentBgColor === 'rgb(255, 255, 255)' && selectedColor !== 'white') {
+        // Change text color to white for all elements
+        body.style.color = 'white';
+        nav.style.color = 'white';
+        navLinks.style.color = 'white';
+        mainContent.style.color = 'white';
+        head.style.color = 'white';
+        tweetCard.style.color = 'white';
+        kstrong.style.color = 'white';
+        fuel.style.color = 'white';
+        onAwka.style.color = 'white';
+        // Change text color of <a> tags inside <li> in nav-links to white
+        navLinksAnchors.forEach(anchor => {
+            anchor.style.color = 'white';
+        });
+        // Change the logo to the alternate logo when the background is black
+        if (selectedColor === 'black') {
+            console.log('Changing logo to alternate logo'); // Debugging: Log logo change
+            console.log('Alternate Logo Path:', alternateLogoSrc); // Debugging: Log the alternate logo path
+            logo.src = alternateLogoSrc;
+        }
+    } else if (selectedColor === 'white') {
+        // If the new background color is white, reset text color to black
+        body.style.color = 'black';
+        nav.style.color = 'black';
+        navLinks.style.color = 'black';
+        mainContent.style.color = 'black';
+        head.style.color = 'black';
+        tweetCard.style.color = 'black';
+        kstrong.style.color = 'black';
+        fuel.style.color = 'black';
+        onAwka.style.color = 'black';
+        // Reset text color of <a> tags inside <li> in nav-links to black
+        navLinksAnchors.forEach(anchor => {
+            anchor.style.color = 'black';
+        });
+        // Reset the logo to the default logo when the background is white
+        console.log('Changing logo to default logo'); // Debugging: Log logo change
+        logo.src = defaultLogoSrc;
+    }
+
+    // Change the background color of the body, nav-links, main-content, and tweet-card
+    body.style.backgroundColor = selectedColor;
+    nav.style.backgroundColor = selectedColor;
+    navLinks.style.backgroundColor = selectedColor;
+    mainContent.style.backgroundColor = selectedColor;
+    tweetCard.style.backgroundColor = selectedColor;
+}
 
 document.addEventListener("DOMContentLoaded", function() {
   let bx_hides = document.querySelectorAll('#bx-hide, #bx-hide2');

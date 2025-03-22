@@ -37,19 +37,19 @@ nav {
   margin-top: 20px;
   margin-left: 22px;
 }
-.nav-links {
+#nav-links {
   display: flex;
   list-style: none;
   column-gap: 1rem;
   max-width: 90rem;
   width: 90rem;
   margin-top: -45px;
-  margin-left: 480px;
+  margin-left: 440px;
 }
-.nav-links li{
+#nav-links li{
   position: relative;
 }
-.nav-links a {
+#nav-links a {
   font-family: system-ui;
   text-decoration: none;
   color: #000000;
@@ -57,8 +57,10 @@ nav {
   font-weight: 500;
   padding: 10px 15px;
   width: 100%;
+  position: relative; /* the ::after pseudo-element is positioned relative to the <a> tag */
 }
-.nav-links a::after {
+/* Apply the underline effect to all <a> tags except the one containing the "Sign up" button */
+#nav-links a:not(.submit_btn-container)::after {
   content: '';
   position: absolute;
   bottom: -1px;
@@ -69,10 +71,12 @@ nav {
   transform-origin: right;
   transition: 0.4s all linear;
 }
-.nav-links a:hover::after,
-.nav-links .home-active::after {
+/* show underline on hover and for the active home link */
+#nav-links a:hover::after,
+#nav-links a.home-active::after {
   width: 100%;
 }
+
 /* Hide the checkbox by default */
 .menu-toggle-checkbox {
   display: none;
@@ -82,9 +86,25 @@ nav {
   font-size: 1.5em;
   cursor: pointer;
 }
+#dark-mode-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 50%;
+  margin-top: 3px;
+  margin-left: 50px;
+  margin-bottom: 0px;
+  cursor: pointer;
+}
+/* Style for the "Sign up" button container */
+.submit_btn-container {
+  text-decoration: none; /* Ensure no underline */
+}
 .submit_btn {
   position: absolute;
   text-decoration: none;
+  list-style-type: none;
   padding: 8px 10px;
   width: 6rem;
   background-color: #7bffde;
@@ -92,16 +112,15 @@ nav {
   font-size: 15px;
   font-weight: 500;
   margin-top: -6px;
-  margin-left: 7.5rem;
+  margin-left: -3rem;
   border: 1px solid rgb(255, 255, 255);
   border-radius: 8px;
   cursor: pointer;
 }
-
- .submit_btn:hover{
+.submit_btn:hover{
   background: #69f794;
 }
-.main-content {
+#main-content {
   text-align: center;
   padding: 40px 20px;
   background-color: #d4d4d4;
@@ -163,12 +182,12 @@ input[type="radio"]:after{
   margin-top: 223px;
   margin-right: 800px;
 }
-.main-content .btn:hover {
+#main-content .btn:hover {
   background-color: #b9d7f7;
 }
-header {
+#head{
   display: flex;
-  font-size: 40px;
+  font-size: 80px;
   font-weight: 800;
   color: #232836;
   margin-top: -110px;
@@ -206,7 +225,7 @@ p {
   margin-top: 0px;
   width: 100%;
 }
-.main-content .S_btn:hover {
+#main-content .S_btn:hover {
   background-color: #65aefc;
 }
 
@@ -299,7 +318,7 @@ p {
 .sub-content-button:hover{
   background-color: #25476e;
 }
-.tweet-card{
+#tweet-card{
   background-color: #fff;
   padding: 25px;
   border-radius: 10px;
@@ -322,7 +341,7 @@ p {
   margin-left: -460px;
   margin-top: -20px;
 }
-.kstrong {
+#kstrong {
   font-size: 14px;
   font-weight: bold;
   width: 100%;
@@ -378,7 +397,7 @@ p {
   margin-top: -25px;
   margin-left: -264px;
 }
-.fuel {
+#fuel {
   width: 92%;
   font-size: 15px;
   font-weight: 500;
@@ -386,7 +405,7 @@ p {
   margin-top: 10px;
   color: #000;
 }
-.on-awka{
+#on-awka{
   display: flex;
   position: relative;
   text-align: left;
@@ -597,7 +616,7 @@ h2.what-offer{
 }
 
 .container {
-  height: 56.5rem;
+  height: 63rem;
   width: 83.5rem;
   margin-left: 8px;
   margin-bottom: 20px;
@@ -616,52 +635,56 @@ h2.what-offer{
  img.logo {
   width: 28%;
   height: auto;
-  margin-top: 8px;
-  margin-right: 355px;
+  margin-right: 0px;
+  margin-top: -10px;
 }
  a.close {
-  position: relative;
-  top: -25px;
-  right: 80px;
+  position: absolute;  
   font-size: 15px;
   font-weight: 800;
   color: #000;
   cursor: pointer;
+  margin-left: 500px;
 }
 .header-welcome{
+  font-size: 50px;
+  font-weight: 600;
   margin-top: 50px;
-  margin-left: 200px;
+  margin-left: -62px;
 }
 p.welcome{
   margin-left: -65px;
 }
 .form-img {
-  float: right;
-  margin-left: 688px;
+  float: right; 
+  margin-left: 670px;
   width: 39.5rem;
-  height: 55.4rem;
+  height: 60.6rem;
   object-fit: cover;
-  margin-top: 14px;
+  margin-top: -85px;
   border-radius: 5px;
 }
  .form {
   display: flex;
   position: relative;
-  max-height: 59.2rem;
-  height: 57rem;
-  max-width: 388rem;
-  width: 305rem;
+  height: 50rem;
+  max-width: 388.5rem;
   border-radius: 6px;
-  background: #d5eaf7f1;
-  margin-top: 15px;
+  background: #ffffff;
+  margin-top: 0px;
   margin-left: 0px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 .form-content-left{
   position: absolute;
   max-width: 100%;
+  margin-top: -80px;
+  margin-left: 0px;
 }
-
+.logo-container{
+  display: flex;
+  margin-top: 0px;
+  margin-left: 0px;
+}
  .field {
   position: relative;
   margin-top: 20px;
@@ -688,10 +711,11 @@ p.welcome{
   padding: 0px 5px;
   border: none;
   text-indent: 5px;
-  margin-left: -18px;
+  margin-left: 18px;
   width: 27.5rem;
-  height: 3.5rem;
+  height: 4.5rem;
   border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 input:hover{
   background: #e6e4e4;
@@ -703,9 +727,9 @@ input#password{
   text-indent: 6px;
   padding: 0px 5px;
   border: none;
-  margin-left: -18px;
+  margin-left: 18px;
   width: 27.5rem;
-  height: 3.5rem;
+  height: 4.5rem;
   border-radius: 6px;
 }
 input#password:hover{
@@ -724,8 +748,8 @@ input#password:hover{
 .button-field button{
   padding: 5px 20px;
   max-width: 56rem;
-  width: 100rem;
-  height: 3.5rem;
+  width: 102rem;
+  height: 4.5rem;
   border: none;
   margin-left: -150px;
   margin-top: 2px;
@@ -747,7 +771,7 @@ input#password:hover{
   width: 38px;
   height: 38px;
   position: absolute;
-  top: 18px;
+  top: 25px;
   left: 515px;
   font-size: 18px;
   color: #000000;
@@ -777,7 +801,7 @@ input#password:hover{
   justify-content: center;
   max-width: 100%;
   width: 27.8rem;
-  height: 3.5rem;
+  height: 4.5rem;
   margin-left: 86px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
@@ -840,12 +864,13 @@ a.google .google-icon {
  .option{
   display: flex;
   width: 13.7rem;
-  height: 3.5rem;
+  height: 4.5rem;
   align-items: center;
   border-radius: 6px;
   margin-top: -23px;
   cursor: pointer;
   background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 .option:hover{
   background: #e6e4e4;
@@ -856,7 +881,7 @@ a.google .google-icon {
   position: relative;
   height: 1px;
   width: 52%;
-  margin: 43px 143px;
+  margin: 43px 150px;
   background-color: #000000;
 }
 .line::before {
@@ -866,7 +891,7 @@ a.google .google-icon {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 0 10px;
-  background: #d7e8fa;
+  background: #ffffff;
   font-size: 18px;
   font-weight: 600;
   color: #050505;
@@ -886,7 +911,7 @@ input#checkbox{
   width: 20px;
   height: 20px;
   margin-top: 20px;
-  margin-left: -73px;
+  margin-left: -46px;
 }
 .form-link,
 .keep {
@@ -902,9 +927,10 @@ input#checkbox{
  a.forgot-pass {
   position: relative;
   top: -3px;
-  margin-left: 140px;
+  margin-left: 135px;
   font-size: 15px;
   font-weight: 600;
+  color: #7bffde;
 }
 .form a {
   text-decoration: none;
@@ -916,7 +942,7 @@ input#checkbox{
   padding: 10px 20px;
   background-color: black;
   margin-left: -20px;
-  width: 69rem;
+  width: 70rem;
   color: white;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -927,7 +953,7 @@ input#checkbox{
 }
  .container2 {
   display: flex;
-  height: 57.6rem;
+  height: 59.6rem;
   width: 84.4rem;
   margin-left: 0px;
   margin-top: 0px;
@@ -946,7 +972,7 @@ input#checkbox{
   width: 11rem;
   height: 8%;
   margin-top: 42px;
-  margin-right: 478px;
+  margin-right: 278px;
 }
  a.close2 {
   position: relative;
@@ -954,24 +980,24 @@ input#checkbox{
   left: 3px;
   font-size: 17px;
   font-weight: 800;
-  color: #000;
+  color: #4df7cc;
   cursor: pointer;
 }
 .form-img2{
   float: left;
   margin-left: 25px;
   width: 48%;
-  height: 54.5rem;
+  height: 56.5rem;
   object-fit: cover;
   margin-top: 22px;
   border-radius: 8px;
 }
  .form2 {
   position: relative;
-  height: 57.2rem;
+  height: 59.2rem;
   width: 84rem;
   border-radius: 6px;
-  background: #d3e7f8f1;
+  background: #ffffff;
   margin-top: 0px;
   margin-left: 0px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -986,7 +1012,7 @@ input#checkbox{
   font-weight: 600;
   width: 30rem;
   color: #232836;
-  margin-left: 555px;
+  margin-left: 495px;
   margin-top: 0px;
 }
  p.welcome2{
@@ -1023,7 +1049,7 @@ input#checkbox{
   background-color: rgb(255, 255, 255);
   border: none;
   outline: none;
-  border-radius: 5px;
+  border-radius: 8px;
   margin-top: 5px;
   margin-left: 113px;
 }
@@ -1055,7 +1081,7 @@ input#checkbox{
   margin-left: 28px;
   width: 29.3rem;
   height: 3.8rem;
-  border-radius: 6px;
+  border-radius: 8px;
 }
 #password2:hover{
   background: #e6e4e4;
@@ -1066,7 +1092,7 @@ img#bx-hide2{
   width: 30px;
   height: 30px;
   position: absolute;
-  top: 12px;
+  top: 20px;
   right: 95px;
   font-size: 18px;
   color: #0e0e0e;
@@ -1083,12 +1109,14 @@ img#bx-hide2{
   width: 29.2rem;
   height: 60px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   font-size: 14px;
   font-weight: 600;
   margin-top: 5px;
   margin-left: 23px;
   outline: none;
+  cursor: pointer;
+  box-shadow: 0 2px 17px rgba(0, 0, 0, 0.1);
 }
 .select-box2::after{
 content: '';
@@ -1111,8 +1139,8 @@ select:hover{
 }
 /* END */
 .checkbox-group{
-  margin-top: -12px;
-  margin-right: 245px;
+  margin-top: -8px;
+  margin-right: 239px;
 }
 input#checkbox2{
   width: 15px;
@@ -1143,14 +1171,15 @@ a.forgot-pass2 {
 }
 .submit2{
   padding: 20px;
-  background-color: black;
+  background-color: rgb(199, 195, 195);
   margin-left: 26px;
   margin-top: 10px;
   width: 29.2rem;
   color: #fff;
   font-size: 14px;
   font-weight: 600;
-  border-radius: 5px;
+  border-radius: 8px;
+  border: none;
   transition: all 0.3s ease;
   cursor: pointer;
   box-shadow: 0 2px 17px rgba(0, 0, 0, 0.1);
@@ -1175,7 +1204,7 @@ a.forgot-pass2 {
   width: 30%;
   transform: translate(-50%, -50%);
   padding: 0 10px;
-  background: #d7e8fa;
+  background: #ffffff;
   font-size: 12px;
   font-weight: 600;
   color: #050505;
@@ -1373,16 +1402,7 @@ a.google2 .google-icon2 {
   margin: auto;
   width: 200px;
 }
-#changeBtn {
-  background-color: #7b828a;
-  color: white;
-  padding: 3px 10px;
-  border: none;
-  border-radius: 5px;
-  margin-top: -30px;
-  margin-bottom: 10px;
-  cursor: pointer;
-}
+
 /* Media query for mobile devices */
 @media (width < 700px) {
   nav{
@@ -1396,7 +1416,7 @@ a.google2 .google-icon2 {
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
   }
-  .nav-links {
+  #nav-links {
     display: none; /* Hide navigation links by default */
     flex-direction: column;
     position: absolute;
@@ -1409,23 +1429,23 @@ a.google2 .google-icon2 {
     z-index: 1000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
- .nav-links li {
+ #nav-links li {
     text-align: center;
     width: 100%;
     font-size: 15px;
     padding: 10px;
     border-bottom: 1px solid #f0f0f0;
   }
-  .nav-links li a {
+  #nav-links li a {
     padding: 2px;
     font-size: 18px;
     border-bottom: 1px solid #f0f0f0;
   }
-  .nav-links li a:hover{
+  #nav-links li a:hover{
     color: #0056b3;
   }
   /* Show nav-links when checkbox is checked */
-  .menu-toggle-checkbox:checked + .menu-icon + .nav-links{
+  .menu-toggle-checkbox:checked + .menu-icon + #nav-links{
     display: flex;
   }
   /* Display the menu icon (hamburger) on mobile */
@@ -1450,7 +1470,7 @@ a.google2 .google-icon2 {
     margin-left: 150px;
   }
   
-  .main-content {
+  #main-content {
     text-align: center;
     padding: 0px;
     background-image: url("../assets/image/image 2@2x.png");
@@ -1499,18 +1519,18 @@ input[type="checkbox"]:hover{
     margin-right: 0px;
     margin-top: 280px;
   }
- .main-content header {
+ #main-content header {
   margin-top: -80px;
     font-size: 30px;
     margin-left: 0px;
   }
-  .main-content h1 {
+  #main-content h1 {
     font-size: 45px;
     margin-top: 100px;
     margin-right: 0px;
     margin-bottom: 0px;
   }
-  .main-content p {
+  #main-content p {
     font-size: 20px;
     padding-bottom: 0px;
     margin-left: 20px;
@@ -1544,7 +1564,7 @@ input[type="checkbox"]:hover{
     margin-top: 0px;
     width: 100%;
   }
-  .main-content p {
+  #main-content p {
     font-size: 18px;
     padding-top: 5px;
     width: 80%;
@@ -1608,7 +1628,7 @@ input[type="checkbox"]:hover{
     padding: 18px 45px;
     margin-left: -70px;
   }
-  .tweet-card {
+  #tweet-card {
     width: 25.8rem;
     height: 26rem;
     margin-left: 8px;
@@ -1619,7 +1639,7 @@ input[type="checkbox"]:hover{
     margin-top: 10px;
     margin-left: 55px;
   }
-  .tweet-card .kaycee-img{
+  #tweet-card .kaycee-img{
     margin-right: -50px;
     margin-top: -10px;
     width: 3rem;
@@ -1861,7 +1881,7 @@ input[type="checkbox"]:hover{
     margin-left: 0px;
   }
   .container {
-    height: 44.5rem;
+    height: 44.7rem;
     width: 98%;
     margin-left: 5px;
     margin-top: 8px;
@@ -1881,21 +1901,25 @@ input[type="checkbox"]:hover{
     margin-top: 10px;
     margin-left: 140px;
   }
+  .logo-container{
+    margin-top: 85px;
+    margin-left: -10px;
+  }
   .form-img {
     float: right;
     margin-right: -201px;
     width: 57%;
-    height: 44.5rem;
+    height: 45.5rem;
     object-fit: cover;
     margin-top: 10px;
     border-radius: 0px 6px 6px 0px;
   }
   .form {
-    height: 45.8rem;
+    height: 47rem;
     width: 28rem;
     border-radius: 6px;
-    background: #d3e7f8f1;
-    margin-top: 18px;
+    background: #fdfdfdf1;
+    margin-top: 25px;
     margin-left: -8px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   }
@@ -1907,12 +1931,12 @@ input[type="checkbox"]:hover{
     font-size: 26px;
     font-weight: 600;
     color: #232836;
-    margin-left: 128px;
-    margin-top: -5px;
+    margin-left: 38px;
+    margin-top: 25px;
   }
    .form-content-left .close {
     display: block;
-    margin-top: 30px;
+    margin-top: 50px;
     margin-left: 180px;
     font-size: 16px;
     font-weight: 600;
@@ -2102,20 +2126,28 @@ input[type="checkbox"]:hover{
     float: left;
     margin-left: 10px;
     width: 27%;
-    height: 52.8rem;
+    height: 55.8rem;
     object-fit: cover;
     margin-top: 10px;
     border-radius: 5px;
   }
   .form2 {
     position: relative;
-    height: 54rem;
+    height: 57rem;
     width: 42rem;
     border-radius: 6px;
-    background: #d3e7f8f1;
+    background: #ffffff;
     margin-top: 0px;
     margin-left: -2px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  .create-account2{
+    font-size: 22px;
+    font-weight: 600;
+    width: 17rem;
+    color: #232836;
+    margin-left: 248px;
+    margin-top: 0px;
   }
   .header-create{
     font-size: 22px;
@@ -2279,7 +2311,7 @@ input[type="checkbox"]:hover{
     width: 38%;
     transform: translate(-50%, -50%);
     padding: 0 10px;
-    background: #d7e8fa;
+    background: #ffffff;
     font-size: 12px;
     font-weight: 600;
     color: #050505;
@@ -2321,7 +2353,7 @@ input[type="checkbox"]:hover{
   }
   .submit2{
     padding: 13px;
-    background-color: black;
+    background-color: rgb(172, 172, 172);
     margin-left: -250px;
     margin-top: 30px;
     width: 13.2rem;
@@ -2387,7 +2419,7 @@ input[type="checkbox"]:hover{
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
   }
-  .nav-links {
+  #nav-links {
     display: none; /* Hide navigation links by default */
     flex-direction: column;
     position: absolute;
@@ -2399,23 +2431,23 @@ input[type="checkbox"]:hover{
     z-index: 1000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
- .nav-links li {
+ #nav-links li {
     text-align: center;
     width: 100%;
     font-size: 15px;
     padding: 2px;
     border-bottom: 1px solid #f0f0f0;
   }
-  .nav-links li a {
+  #nav-links li a {
     padding: 2px;
     font-size: 18px;
     border-bottom: 1px solid #f0f0f0;
   }
-  .nav-links li a:hover{
+  #nav-links li a:hover{
     color: #0056b3;
   }
   /* Show nav-links when checkbox is checked */
-  .menu-toggle-checkbox:checked + .menu-icon + .nav-links {
+  .menu-toggle-checkbox:checked + .menu-icon + #nav-links {
     display: flex;
   }
   /* Display the menu icon (hamburger) on mobile */
@@ -2438,7 +2470,7 @@ input[type="checkbox"]:hover{
     margin-top: 10px;
     margin-left: 0px;
   }
-  .main-content {
+  #main-content {
     text-align: center;
     padding: 40px 20px;
     background-color: #bcc5ce;
@@ -2497,19 +2529,19 @@ input[type="checkbox"]:hover{
     margin-right: 0px;
     margin-top: 280px;
   }
- .main-content header {
+ #main-content header {
   margin-top: -80px;
     font-size: 30px;
     margin-left: 0px;
   }
-  .main-content h1 {
+  #main-content h1 {
     font-size: 30px;
     margin-top: 100px;
     margin-right: 0px;
     margin-bottom: 0px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
   }
-  .main-content p {
+  #main-content p {
     font-size: 18px;
     padding-bottom: 0px;
     margin-left: 20px;
@@ -2542,7 +2574,7 @@ input[type="checkbox"]:hover{
     margin-top: 0px;
     width: 100%;
   }
-  .main-content p {
+  #main-content p {
     font-size: 18px;
     padding-top: 5px;
     width: 80%;
@@ -2632,13 +2664,13 @@ h2{
 .sub-content-button:hover{
   background-color: #0056b3;
 }
- .tweet-card {
+ #tweet-card {
   width: 31rem;
   height: 29rem;
   margin-left: 155px;
   margin-top: 80px;
 }
-.tweet-card .kaycee-img{
+#tweet-card .kaycee-img{
   width: 17%;
   height: 17%;
   margin-right: 80px;

@@ -27,28 +27,36 @@
   <body>
     
     <!-- Navigation bar for the website -->
-    <nav>
+    <nav id="nav">
      <!-- Logo for the website -->
      <label class="logo">
-     <img 
-        src="./assets/image/Data For  Vericapture 2.png" 
-        alt="logo" 
-      />
-    </label>
+       <img 
+          src="./assets/image/Data For  Vericapture 2.png"
+          alt="logo" 
+        />
+     </label>
 
       <!-- Checkbox for toggling the menu -->
       <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox" />
 
       <!-- Label acts as the hamburger icon -->
       <label for="menu-toggle" class="menu-icon">&#9776;</label>
-      <ul class="nav-links">
+      <ul id="nav-links">
         <li><a href="index.html" class="home-active">Home</a></li>
         <li><a href="realtime capture.html">RealTime Capture</a></li>
         <li><a href="map.html">Map</a></li>
         <li><a href="trending.html">Trending</a></li>
         <li><a href="about us.html">About us</a></li>
         <li>
-          <a href="#">
+          <div class="changeContainer">
+            <label for="image-toggle" class="dark-mode-label">
+              <img src="./assets/image/dark mode.png" alt="dark mode" id="dark-mode-toggle"
+              />
+            </label>
+          </div>
+        </li>
+        <li>
+          <a href="#" class="submit_btn-container">
             <button type="submit" class="submit_btn">Sign up</button>
           </a>
         </li>
@@ -57,7 +65,7 @@
     </nav>
   
     <!-- Section for the main content -->
-    <div class="main-content">
+    <div id="main-content">
       <!-- Checkbox for the main content -->
      
         <input type="radio" name="style1" id="style1" />
@@ -65,7 +73,7 @@
      
       <!-- Heading for the main content -->
       <header>
-        <h1>If It's Not Here, <br />It Never Happened <br /></h1>
+        <h1 id="head">If It's Not Here, <br />It Never Happened <br /></h1>
       </header>
 
       <!-- Paragraph for the main content -->
@@ -99,15 +107,15 @@
         
       <button class="sub-content-button">Take a look <img src="./assets/image/Vector (3).png" alt="image"></button>
     </div>
-    <div class="tweet-card">
+    <div id="tweet-card">
       <div class="tweet-header">
         <img class="kaycee-img" src="./assets/image/Ellipse 2.png" alt="img">
-        <p class="kstrong">Kaycee Pastor</p><span class="time">4hr ago</span>
+        <p id="kstrong">Kaycee Pastor</p><span class="time">4hr ago</span>
         <button class="traffic-button">Traffic</button>
         <img id="location" src="./assets/image/Vector (12).png" alt="image" >
         <p class="awka">Awka Anambra</p>
           
-        <p class="fuel">Fuel tanker falls and caused serious traffic <span class="on-awka"> on Awka Onitsha Express Way</span></p>
+        <p id="fuel">Fuel tanker falls and caused serious traffic <span id="on-awka"> on Awka Onitsha Express Way</span></p>
         <div class="traffic" data-traffic-id="6542">
           <img class="traffic-image" src="./assets/image/image.png" alt="traffic image">
           <div class="traffic-ratings-container">
@@ -168,7 +176,7 @@
      <div class="row-mb">
       <div class="feature-item-grid-col">
         <img
-          src="./assets/image/Vector (4).png"
+          src="./assets/image/Vector (16).png"
           alt="Authentic"
           class="realtime"
         />
@@ -181,7 +189,7 @@
 
       <div class="feature-item-grid-col">
         <img
-          src="./assets/image/FirstAid.png"
+          src="./assets/image/FirstAid (1).png"
           alt="Emergency"
           class="realtime"
         />
@@ -248,9 +256,7 @@
        </section>
       </div>
     </div>
-    <div class="changeContainer">
-      <button id="changeBtn">Change background</button>
-    </div>
+    
   <script src="./scripts/index.js"></script>
   </body>
 </html>
