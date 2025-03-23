@@ -1244,6 +1244,8 @@ a.google2 {
 }
 .google2:hover{
   background: #e6e4e4;
+  border: 1px solid rgba(0, 255, 64, 0.74);
+  outline: none;
 }
 a.google2 .google-icon2 {
   height: 20px;
@@ -1267,8 +1269,6 @@ a.google2 .google-icon2 {
 .form2 a:hover {
   text-decoration: underline;
   background: #e6e4e4;
-  border: 1px solid rgba(0, 255, 64, 0.74);
-  outline: none;
 }
 .options2{
   position: relative;
