@@ -66,6 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 const darkModeToggle = document.getElementById('dark-mode-toggle'); // Select the dark mode toggle image
+const darkModeToggle2 = document.getElementById('dark-mode-toggle2'); // Select the dark mode toggle image
 const body = document.body;
 const nav = document.getElementById('nav');
 const navLinks = document.getElementById('nav-links');
@@ -77,12 +78,18 @@ const fuel = document.getElementById('fuel');
 const onAwka = document.getElementById('on-awka');
 const navLinksAnchors = navLinks.querySelectorAll('li a'); // Select all <a> tags inside <li> in nav-links
 const logo = document.querySelector('.logo img'); // Select the logo image inside the label
+const container = document.querySelector('.container'); // Select the container
 
 const colors = ['white', 'black']; // Array of colors
 const defaultLogoSrc = './assets/image/Data For  Vericapture 2.png'; // Default logo source
 const alternateLogoSrc = './assets/image/logosss___2_-removebg-preview 1.png'; // Alternate logo source
 
-darkModeToggle.addEventListener('click', changeBackground); // Add click event listener to the dark mode toggle
+// Image paths for dark mode and light mode toggle
+const darkModeImage = './assets/image/dark mode.png'; // Dark mode image
+const lightModeImage = './assets/image/Property 1=Sun.png'; // Light mode image
+
+darkModeToggle.addEventListener('click', changeBackground); // click event listener to the dark mode toggle
+darkModeToggle2.addEventListener('click', changeBackground); // click event listener to the dark mode toggle
 
 function changeBackground() {
     const colorsIndex = Math.floor(Math.random() * colors.length);
@@ -105,6 +112,7 @@ function changeBackground() {
         kstrong.style.color = 'white';
         fuel.style.color = 'white';
         onAwka.style.color = 'white';
+        container.style.color = 'white';
         // Change text color of <a> tags inside <li> in nav-links to white
         navLinksAnchors.forEach(anchor => {
             anchor.style.color = 'white';
@@ -114,6 +122,9 @@ function changeBackground() {
             console.log('Changing logo to alternate logo'); // Debugging: Log logo change
             console.log('Alternate Logo Path:', alternateLogoSrc); // Debugging: Log the alternate logo path
             logo.src = alternateLogoSrc;
+            // Change the dark mode toggle image to the light mode image
+            darkModeToggle.src = lightModeImage;
+            darkModeToggle2.src = lightModeImage;
         }
     } else if (selectedColor === 'white') {
         // If the new background color is white, reset text color to black
@@ -126,6 +137,7 @@ function changeBackground() {
         kstrong.style.color = 'black';
         fuel.style.color = 'black';
         onAwka.style.color = 'black';
+        container.style.color = 'black';
         // Reset text color of <a> tags inside <li> in nav-links to black
         navLinksAnchors.forEach(anchor => {
             anchor.style.color = 'black';
@@ -133,6 +145,9 @@ function changeBackground() {
         // Reset the logo to the default logo when the background is white
         console.log('Changing logo to default logo'); // Debugging: Log logo change
         logo.src = defaultLogoSrc;
+        // Reset the dark mode toggle image to the dark mode image
+        darkModeToggle.src = darkModeImage;
+        darkModeToggle2.src = darkModeImage;
     }
 
     // Change the background color of the body, nav-links, main-content, and tweet-card
@@ -141,6 +156,7 @@ function changeBackground() {
     navLinks.style.backgroundColor = selectedColor;
     mainContent.style.backgroundColor = selectedColor;
     tweetCard.style.backgroundColor = selectedColor;
+    container.style.backgroundColor = selectedColor;
 }
 
 document.addEventListener("DOMContentLoaded", function() {

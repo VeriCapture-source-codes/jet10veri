@@ -18,7 +18,7 @@ body {
   line-height: 1.6;
 }
 /* Basic Styling for Desktop */
-nav {
+#nav, #nav2 {
   position: fixed;
   top: 0;
   right: 0;
@@ -29,15 +29,18 @@ nav {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: 0.5s;
 }
-
-.logo img{
+#nav2{
+ width: 86rem;
+ right: -15px;
+}
+.logo, .logo2 img{
   display: flex;
   width: 15rem;
   height: 4rem;
   margin-top: 20px;
   margin-left: 22px;
 }
-#nav-links {
+#nav-links, #nav-links2 {
   display: flex;
   list-style: none;
   column-gap: 1rem;
@@ -46,10 +49,10 @@ nav {
   margin-top: -45px;
   margin-left: 440px;
 }
-#nav-links li{
+#nav-links li, #nav-links2 li {
   position: relative;
 }
-#nav-links a {
+#nav-links a, #nav-links2 a {
   font-family: system-ui;
   text-decoration: none;
   color: #000000;
@@ -60,7 +63,7 @@ nav {
   position: relative; /* the ::after pseudo-element is positioned relative to the <a> tag */
 }
 /* Apply the underline effect to all <a> tags except the one containing the "Sign up" button */
-#nav-links a:not(.submit_btn-container)::after {
+#nav-links2, #nav-links a:not(.submit_btn-container)::after {
   content: '';
   position: absolute;
   bottom: -1px;
@@ -72,19 +75,23 @@ nav {
   transition: 0.4s all linear;
 }
 /* show underline on hover and for the active home link */
-#nav-links a:hover::after,
-#nav-links a.home-active::after {
+#nav-links2, #nav-links a:hover::after,
+#nav-links2, #nav-links a.home-active::after {
   width: 100%;
 }
 
 /* Hide the checkbox by default */
-.menu-toggle-checkbox {
+.menu-toggle-checkbox, .menu-toggle-checkbox2 {
   display: none;
 }
-.menu-icon {
+.menu-icon, .menu-icon2 {
   display: none; /* Hide menu icon on desktop */
   font-size: 1.5em;
   cursor: pointer;
+}
+.dark-mode-label2 {
+  display: flex;
+  margin-left: 30px;
 }
 #dark-mode-toggle {
   display: flex;
@@ -93,7 +100,7 @@ nav {
   background-color: #ffffff;
   border-radius: 50%;
   margin-top: 3px;
-  margin-left: 50px;
+  margin-left: 60px;
   margin-bottom: 0px;
   cursor: pointer;
 }
@@ -119,6 +126,345 @@ nav {
 }
 .submit_btn:hover{
   background: #69f794;
+}
+.optimusNaija {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #000000;
+  margin-top: -10px;
+  left: 20px;
+}
+#nav-links2 a.optimus-container {
+  color: #868585;
+  font-size: 0.6rem;
+  margin-top: 0px;
+  margin-left: 40px;
+}
+.ellipse-img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: #f3f0ef;
+  position: absolute;
+  top: 0;
+  left: -8px;
+  margin-top: 0px;
+  margin-right: 0px;
+}
+.explore-container {
+  display: block;
+  font-size: 0.6rem;
+  font-weight: 800;
+  color: #000000;
+  width: 10rem;
+  margin-top: 120px;
+  margin-left: 100px;
+}
+.explore-cont{
+  position: relative;
+  margin-left: 50px;
+}
+.explore-list {
+  display: flex;
+  list-style: none;
+  column-gap: 6.5rem;
+  width: 60rem;
+  margin-top: 15px;
+  margin-left: 15rem;
+}
+.explore-list li {
+  position: relative;
+  margin-left: 20px;
+}
+.explore-list li:hover{
+text-decoration: underline;
+}
+.update-container {
+  float: left;
+  position: relative;
+  font-size: 0.6rem;
+  font-weight: 800;
+  color: #000000;
+  width: 30rem;
+  margin-top: 30px;
+  margin-right: 0px;
+}
+.ellipse-update {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: #f3f0ef;
+  position: absolute;
+  margin-top: 17px;
+  margin-left: 20px;
+}
+.update-input{
+  text-indent: 50px;
+}
+.videocam-btn{
+  position: absolute;
+  font-size: 0.6rem;
+  font-weight: 800;
+  color: #000000;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+#search-container {
+  float: right;
+  margin-top: 0px;
+  margin-left: 100px;
+  transform-origin: right;
+}
+ .search-input {
+  float: right;
+  width: 15rem;
+  height: 1.8rem;
+  font-size: 0.7rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 25px;
+  padding: 8px 40px 8px 20px;
+  margin-top: -0px;
+  margin-left: 0px;
+  text-indent: 15px;
+  transition: right;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.fa-search {
+  float: right;
+  position: relative;
+  top: -20px;
+  right: 13.5rem;
+  padding: 1px 2px;
+  border-radius: 25px;
+  background-color: #ffffff;
+  color: #000000;
+  z-index: 1000;
+}
+/* START */
+.your-area {
+float: right;
+display: flex;
+  width: 20rem;
+  height: 15rem;
+  background-color: #ffffff;
+  font-size: 0.6rem;
+  font-weight: 800;
+  color: #000000;
+  margin-top: 20px;
+  margin-left: 353rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.what-area{
+  width: 13rem;
+  height: 1.8rem;
+  text-align: left;
+  margin-left: 60px;
+}
+ #select-area {
+  position: relative;
+}
+  #select-area{
+  float: right;
+  height: 1.8rem;
+  width: 12rem;
+  font-size: 0.6rem;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-right: 65px;
+}
+#select-area::after{
+  content: '';
+  position: relative;
+  z-index: 1;
+  width: 18px;
+  height: 18px;
+  border-right: 1px solid rgb(0, 0, 0);
+  border-bottom: 1px solid rgb(12, 12, 12);
+  transform: rotate(45deg);
+  right: 0px;
+  top: 10px;
+  pointer-events: none;
+  }
+/* END */
+.run-location{
+  display: flex;
+  font-size: 0.2rem;
+  font-weight: 800;
+  color: #000000;
+  margin-top: 0px;
+  margin-left: 20px;
+}
+.tweet-card2{
+  position: relative;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  width: 36rem;
+  height: 29rem;
+  margin-right: 0px;
+  margin-top: 21rem;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+}
+.tweet-header2{
+  display: flex;
+  margin-top: 10px;
+  margin-left: 15px;
+}
+.ellipse-2{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-left: -460px;
+  margin-top: -20px;
+}
+.optimus-naija2 {
+  font-size: 14px;
+  font-weight: 800;
+  width: 100rem;
+  margin-top: -15px;
+  margin-right: 40px;
+  color: #000;
+}
+.time2{
+  width: 100rem;
+  font-size: 12px;
+  color: grey;
+  margin-left: 145px;
+  margin-top: 10px;
+  position: relative;
+  top: -22px;
+  left: -200px;
+}
+.crime-scenes{
+  display: flex;
+  width: 15rem;
+  height: 2rem;
+  padding: 5px 10px;
+  background-color: #f9fd0c;
+  font-size: 13px;
+  border-radius: 15px;
+  margin-top: -25px;
+  margin-left: 24px;
+}
+.vector-img{
+  width: 5%;
+  height: 5%;
+  margin-top: 15px;
+  margin-right: 264px;
+}
+.angry-mob {
+  width: 92rem;
+  font-size: 15px;
+  font-weight: 500;
+  margin-left: -22px;
+  margin-top: 10px;
+  color: #000;
+}
+ #tweet-card3{
+  position: relative;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  width: 36rem;
+  height: 20rem;
+  margin-right: 0px;
+  margin-top: 180rem;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+}
+.tweet-header3{
+  display: flex;
+  margin-top: 10px;
+  margin-left: 15px;
+}
+.kaycee-img3{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-left: -460px;
+  margin-top: -20px;
+}
+#kstrong3{
+  font-size: 14px;
+  font-weight: bold;
+  width: 100%;
+  margin-top: -55px;
+  margin-left: -150px;
+  color: #000;
+}
+.traffic-button3{
+  background-color: rgb(218, 204, 14);
+  padding: 2px 12px;
+  border: none;
+  border-radius: 15px;
+  margin: 0px -20px 0px;
+  margin-left: 70px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  top: -22px;
+  left: -50px;
+}
+ img#location3{
+  width: 3rem;
+  height: 3%;
+  margin-left: -90px;
+  margin-top: 0px;
+  position: relative;
+  top: 0px;
+  left: -357px;
+}
+#fuel3{
+  width: 92%;
+  font-size: 15px;
+  font-weight: 500;
+  margin-left: -22px;
+  margin-top: 10px;
+  color: #000;
+}
+#on-awka3{
+  display: flex;
+  position: relative;
+  text-align: left;
+  margin-left: 53px;
+  top: 3px;
+}
+.traffic3{
+  font-family: 'Lexend', sans-serif;
+}
+.traffic-image3{
+  width: 89%;
+  display: block;
+  margin-left: 25px;
+  margin-top: 20px;
+}
+.traffic-ratings-container3{
+  display: flex;
+  justify-content: start;
+  padding: 12px 0;
+  margin-left: 10px;
+}
+.traffic-rating3{
+  display: flex;
+  align-items: center;
+  cursor: default;
+  width: 95%;
+  margin-left: 20px;
+}
+.traffic-rating-button3{
+  margin-right: 6px;
+  cursor: pointer;
+  color: #555555;
+}
+.traffic-rating-count3{
+  margin-right: 6px;
+  cursor: pointer;
+  color: #53f3e6;
+}
+.traffic-rating3:not(:last-child){
+  margin-right: 12px;
 }
 #main-content {
   text-align: center;
@@ -328,6 +674,7 @@ p {
   margin-left: 700px;
   margin-top: -600px;
 }
+
 .tweet-header{
   display: block;
   margin-top: 10px;
@@ -637,6 +984,17 @@ h2.what-offer{
   height: auto;
   margin-right: 0px;
   margin-top: -10px;
+}
+#dark-mode-toggle2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 50%;
+  margin-top: 3px;
+  margin-left: 140px;
+  margin-bottom: 0px;
+  cursor: pointer;
 }
  a.close {
   position: absolute;  
