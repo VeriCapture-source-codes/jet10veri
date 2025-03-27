@@ -22,21 +22,76 @@
     />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+      <style>
+        :root {
+          --bg-color: white;
+          --text-color: black;
+          --line-color: #000;
+        }
+        
+        body {
+          background-color: var(--bg-color);
+          color: var(--text-color);
+          transition: all 0.3s ease;
+        }
+        
+        .line2 {
+          position: relative;
+          height: 2px;
+          width: 25%;
+          margin: 23px 847px;
+          background-color: var(--line-color);
+          transition: background-color 0.3s ease;
+        }
+        
+        .line2::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 40px;
+          top: 0;
+          height: 2px;
+          background-color: var(--line-color);
+        }
+        
+        .line2::before {
+          content: "or sign up with";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 30%;
+          transform: translate(-50%, -50%);
+          padding: 0 10px;
+          background: var(--bg-color);
+          font-size: 12px;
+          font-weight: 600;
+          color: var(--text-color);
+          z-index: 1;
+          transition: all 0.3s ease;
+        }
+      </style>
 </head>
 <body>
-    
+
     <section class="container2">
       <div class="form-login2">
         <div class="form-content2">
           <section class="form-content-left2">
             <form action="#" class="form2">
               <img class="form-img2" src="./assets/image/image 6.png" alt="image" />
-              <div>
-                <img
-                  src="./assets/image/Data For  Vericapture 2.png"
-                  alt="logo2"
-                  class="logo2"
-                />
+              <div class="logo-group">
+                <div class="logo-container2">
+                  <img 
+                    class="logo2"
+                    src="./assets/image/Data For  Vericapture 2.png"
+                    alt="logo2"
+                  />
+                </div>
+                <div class="changeContainer3">
+                  <label for="image-toggle" class="dark-mode-label3">
+                    <img id="dark-mode-toggle3" src="./assets/image/dark mode.png">
+                  </label>
+                </div>
               </div>
               <div class="create-account2">
                 <header class="header-create">Create an account</header>
@@ -49,16 +104,16 @@
                     type="text"
                     id="first-name"
                     placeholder="First name"
-                    required
-                  />
+                    autocomplete="given-name"
+                  >
                 </div>
                 <div class="form-group">
                   <input
                     type="text"
                     id="last-name"
                     placeholder="Last name"
-                    required
-                  />
+                    autocomplete="family-name"
+                  >
                 </div>
               </div>
               <div class="field2 input-field2">
@@ -66,8 +121,8 @@
                   type="email"
                   placeholder="Email"
                   class="input2"
-                  required
-                />
+                  autocomplete="email"
+                >
               </div>
   
               <div class="field2 input-field2">
@@ -75,8 +130,8 @@
                   type="usename"
                   placeholder="Create Username"
                   class="input2"
-                  required
-                />
+                  autocomplete="username"
+                >
               </div>
   
               <div class="field2 input-field2">
@@ -84,12 +139,12 @@
                   type="password"
                   placeholder="Enter your password"
                   id="password2"
-                  required autocomplete="current-password"
-                />
+                  autocomplete="current-password"
+                >
                 <img src="./assets/image/bx-hide.png" id="bx-hide2" alt="toggle visibility" />
              </div>
              <div class="select-box2">
-                <select>
+                <select class="kenya">
                   <option value="country">Select your country</option>
                   <option>Kenya</option>
                   <option>Uganda</option>
@@ -177,7 +232,106 @@
           };
         });
       });
-    </script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+    // 1. SELECT ELEMENTS (only require darkModeToggle3)
+    const elements = {
+        darkModeToggle3: document.getElementById('dark-mode-toggle3'),
+        body: document.body,
+        logo: document.querySelector('.logo2'),
+        container2: document.querySelector('.container2'),
+        formLogin2: document.querySelector('.form-login2'),
+        formContent2: document.querySelector('.form-content2'),
+        formContentLeft2: document.querySelector('.form-content-left2'),
+        line: document.querySelector('.line2')
+    };
+
+   // 2. CHECK CRITICAL ELEMENTS (now only requiring toggle3)
+    if (!elements.darkModeToggle3 || !elements.body || !elements.logo) {
+        console.error('Missing critical elements!');
+        console.log('Elements status:', {
+            darkModeToggle3: !!elements.darkModeToggle3,
+            body: !!elements.body,
+            logo: !!elements.logo
+        });
+        return;
+    }
+
+    // 3. IMAGE PATHS (no spaces!)
+    const images = {
+       defaultLogoSrc: './assets/image/Data For  Vericapture 2.png',
+       alternateLogoSrc: './assets/image/logosss___2_-removebg-preview 1.png',
+       darkModeImage: './assets/image/dark mode.png',
+       lightModeImage: './assets/image/Property 1=Sun.png'
+    };
+
+    // 4. STATE MANAGEMENT
+    let isDarkMode = false;
+
+    function toggleDarkMode() {
+        isDarkMode = !isDarkMode;
+        applyDarkMode(isDarkMode);
+    }
+
+    function applyDarkMode(shouldBeDark) {
+        if (shouldBeDark) {
+            // DARK MODE
+            elements.body.style.backgroundColor = 'black';
+            elements.body.style.color = 'white';
+            
+            elements.logo.src = images.alternateLogoSrc;
+            elements.darkModeToggle3.src = images.lightModeImage;
+
+            // Style optional elements if they exist
+            [container2, formLogin2, formContent2, formContentLeft2, line].forEach(el => {
+                if (el) {
+                    el.style.backgroundColor = 'black';
+                    el.style.color = 'white';
+                }
+            });
+        } else {
+            // LIGHT MODE
+            elements.body.style.backgroundColor = 'white';
+            elements.body.style.color = 'black';
+            
+            elements.logo.src = images.defaultLogoSrc;
+            elements.darkModeToggle3.src = images.darkModeImage;
+
+            // Reset optional elements
+            [container2, formLogin2, formContent2, formContentLeft2, line].forEach(el => {
+                if (el) {
+                    el.style.backgroundColor = 'white';
+                    el.style.color = 'black';
+                }
+            });
+        }
+    }
+
+    // 5. EVENT LISTENER (only for the existing toggle)
+    elements.darkModeToggle3.addEventListener('click', toggleDarkMode);
+});
+
+ // Your existing JavaScript with the updated applyDarkMode function
+ function applyDarkMode(shouldBeDark) {
+      const root = document.documentElement;
+      
+      if (shouldBeDark) {
+        root.style.setProperty('--bg-color', 'black');
+        root.style.setProperty('--text-color', 'white');
+        root.style.setProperty('--line-color', '#333');
+      } else {
+        root.style.setProperty('--bg-color', 'white');
+        root.style.setProperty('--text-color', 'black');
+        root.style.setProperty('--line-color', '#000');
+      }
+    }
     
-</body>
+    // Example toggle (you would connect this to your button)
+    let darkMode = false;
+    function toggleDarkMode() {
+      darkMode = !darkMode;
+      applyDarkMode(darkMode);
+    }
+    </script>
+  </body>
 </html>

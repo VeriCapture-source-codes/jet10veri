@@ -47,8 +47,8 @@
         <li><a href="trending.html">Trending</a></li>
         <li>
           <div class="changeContainer">
-            <label for="image-toggle" class="dark-mode-label2">
-              <img src="./assets/image/dark mode.png" alt="dark mode" id="dark-mode-toggle"
+            <label for="image-toggle" class="dark-mode-label4">
+              <img src="./assets/image/dark mode.png" alt="dark mode" id="dark-mode-toggle4"
               />
             </label>
           </div>
@@ -65,6 +65,27 @@
             <img src="./assets/image/Ellipse 1.png" alt="Ellipse 1" class="ellipse-img" />
         </li>
       </ul>
+    </nav>
+    <!-- Sidebar -->
+    <nav class="sidebar">
+       
+        <ul class="menu">
+            <li class="active">
+                <a href="./index.html"><img src="./assets/image/House.png" alt="Home"> Home</a>
+            </li>
+            <li>
+                <a href="#"><img src="./assets/image/Explore.png" alt="Explore"> Explore</a>
+            </li>
+            <li>
+                <a href="#"><img src="./assets/image/Vector (17).png" alt="Notification"> Notification</a>
+            </li>
+            <li>
+                <a href="#"><img src="./assets/image/Vector (18).png" alt="Profile"> Profile</a>
+            </li>
+            <li>
+                <a href="#"><img src="./assets/image/Gear.png" alt="Settings"> Settings</a>
+            </li>
+        </ul>
     </nav>
 
     <!-- explore content -->
@@ -86,63 +107,117 @@
                    </li>
                </ul>
            </div>
+    
            <div id="search-container">
-             <input type="text" name="" placeholder="Type to Search..." class="search-input" />
-             <i class="fa fa-search" aria-hidden="true"></i>
+               <input class="search-input" type="text" name="" placeholder="Type to Search..." />
+               <i class="fa fa-search" aria-hidden="true"></i>
+               <div class="your-area">
+                   <div id="select-box3">
+                      <p class="what-area">What happening in your area?</p>
+                      <select class="select-area">
+                           <option value="Nigeria">Nigeria</option>
+                           <option value="ota">Ota</option>
+                           <option value="awka">Awka</option>
+                           <option value="onitsha">Onitsha</option>
+                           <option value="enugu">Enugu</option>
+                           <option value="owerri">Owerri</option>
+                           <option value="portharcourt">Portharcourt</option>
+                           <option value="uyo">Uyo</option>
+                           <option value="calabar">Calabar</option>
+                           <option value="warri">Warri</option>
+                           <option value="asaba">Asaba</option>
+                           <option value="benin">Benin</option>
+                           <option value="akure">Akure</option>
+                           <option value="lagos">Lagos</option>
+                           <option value="abuja">Abuja</option>
+                           <option value="kano">Kano</option>
+                           <option value="ibadan">Ibadan</option>
+                      </select>
+
+                   </div>
+               </div>
            </div>
-           <div class="your-area">
-              <p class="what-area">What happening in your area?</p>
-              <select name="select" id="select-area">
-                  <option value="position" class="run-location">Select Location</option>
-                  <option value="Nigeria">Nigeria</option>
-                  <option value="ota">Ota</option>
-                  <option value="awka">Awka</option>
-                  <option value="onitsha">Onitsha</option>
-                  <option value="enugu">Enugu</option>
-                  <option value="owerri">Owerri</option>
-                  <option value="portharcourt">Portharcourt</option>
-                  <option value="uyo">Uyo</option>
-                  <option value="calabar">Calabar</option>
-                  <option value="warri">Warri</option>
-                  <option value="asaba">Asaba</option>
-                  <option value="benin">Benin</option>
-                  <option value="akure">Akure</option>
-                  <option value="lagos">Lagos</option>
-                  <option value="abuja">Abuja</option>
-                  <option value="kano">Kano</option>
-                  <option value="ibadan">Ibadan</option>
-             </select>
-          </div>
         </div> 
-          <div class="update-container">
-             <img src="./assets/image/Ellipse 1.png" alt="Ellipse 1" class="ellipse-update" />
-             <input type="text" name="update" placeholder="Post an update" class="update-input" />
-             <button class="videocam-btn"><img src="./assets/image/Videocam.png" alt="videocam"></button>
-          </div>
+        <div class="update-container">
+            <img src="./assets/image/Ellipse 1.png" alt="Ellipse 1" class="ellipse-update" />
+            <input class="update-input" type="text" name="update" placeholder="Post an update" />
+            <button class="videocam-btn"><img class="camera" src="./assets/image/Videocam.png" alt="videocam">Go Live</button>
+        </div>
          
-        <div class="tweet-card2">
+        <div class="tweet-card4">
             <div class="tweet-header2">
-                <img src="./assets/image/Ellipse 1.png" alt="alternatively" class="ellipse-2">
+                <img class="ellipse-2" src="./assets/image/Ellipse 1.png" alt="alternatively" >
                 <p class="optimus-naija2">Optimus Naija</p>
                 <p class="time2">2m ago</p>
                 <button class="crime-scenes">Crime</button>
-                <img src="./assets/image/Vector (12).png" alt="Oshodi Lagos" class="vector-img">
+                <img class="vector-img" src="./assets/image/Vector (12).png" alt="Oshodi Lagos" >
                 <p class="oshodi-lagos">Oshodi Lagos</p>
-                <p class="angry-mob">Angry mob storms street in retaliation of dead gang memberm serious traffic</p>
-                <img src="./assets/image/image 14.png" alt="image 14" class="image-14">
+                <p class="angry-mob">Angry mob storms street in retaliation of dead gang member, causes serious traffic</p>
+                <div class="traffic" data-traffic-id="6542">
+                    <img class="image-14" src="./assets/image/image 14.png" alt="image 14" >
+                    <div class="traffic-ratings-container">
+                        <div class="traffic-rating">
+                            <span class="traffic-rating-button material-icons">thumb_up</span>
+                            <span class="traffic-rating-count">0</span>
+                        </div>
+                        <div class="traffic-rating">
+                            <span class="traffic-rating-button material-icons">thumb_down</span>
+                            <span class="traffic-rating-count">0</span>
+                        </div>
+                        <div class="traffic-rating">
+                            <span class="traffic-rating-button material-icons">comment</span>
+                            <span class="traffic-rating-count">0</span>
+                        </div>
+                        <div class="traffic-rating">
+                            <span class="traffic-rating-button material-icons">share</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
         <div id="tweet-card3">
             <div class="tweet-header3">
-                <img class="kaycee-img3" src="./assets/image/Ellipse 2.png" alt="img">
-                <p id="kstrong3">Kaycee Pastor</p><span class="time">4hr ago</span>
-                <button class="traffic-button3">Traffic</button>
-                <img id="location" src="./assets/image/Vector (12).png" alt="image" >
-                <p class="awka">Awka Anambra</p>
-                    
-                <p id="fuel">Fuel tanker falls and caused serious traffic <span id="on-awka"> on Awka Onitsha Express Way</span></p>
+                <img class="kaycee-img4" src="./assets/image/Ellipse 2.png" alt="img">
+                <p id="kstrong4">Kaycee Pastor</p><span class="time4">4hr ago</span>
+                <button class="traffic-button5">Traffic</button>
+                <img id="location4" src="./assets/image/Vector (12).png" alt="image" >
+                <p class="awka4">Awka Anambra</p>
+                <p id="fuel4">Fuel tanker falls and caused serious traffic <span id="on-awka4"> on Awka Onitsha Express Way</span></p>
                 <div class="traffic" data-traffic-id="6542">
-                    <img class="traffic-image" src="./assets/image/image.png" alt="traffic image">
+                    <img class="traffic-image5" src="./assets/image/image.png" alt="traffic image">
+                    <div class="traffic-ratings-container">
+                        <div class="traffic-rating">
+                            <span class="traffic-rating-button material-icons">thumb_up</span>
+                            <span class="traffic-rating-count">0</span>
+                        </div>
+                        <div class="traffic-rating">
+                            <span class="traffic-rating-button material-icons">thumb_down</span>
+                            <span class="traffic-rating-count">0</span>
+                        </div>
+                        <div class="traffic-rating">
+                            <span class="traffic-rating-button material-icons">comment</span>
+                            <span class="traffic-rating-count">0</span>
+                        </div>
+                        <div class="traffic-rating">
+                            <span class="traffic-rating-button material-icons">share</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="tweet-card6">
+            <div class="tweet-header6">   
+                <button class="riot-btn">Riot</button>
+                <p class="time6">2m ago</p>
+                <p class="valentine">Valentine Obayi</p>
+                <img class="ellipse-3" src="./assets/image/Ellipse 3.png" alt="ellipse 3" >
+                <img class="vector-img3" src="./assets/image/Vector (12).png" alt="vector-img" >
+                <p class="agege-lagos6">Agege Lagos</p>
+                <p class="road-block">Road blocked on agege motor road as thugs clash.</p>
+               <div class="traffic" data-traffic-id="6542">
+                    <img class="image-riot" src="./assets/image/image riot.png" alt="image riot">
                     <div class="traffic-ratings-container">
                         <div class="traffic-rating">
                             <span class="traffic-rating-button material-icons">thumb_up</span>
