@@ -149,18 +149,22 @@
             alt="logo"
             class="logo"
           />
-          <a href="#" class="close">Create an account</a>
+          <a href="#" class="close">Create an account</a>        
+
 
           <header>Welcome Back</header>
           <p>Welcome back, please enter your detail</p>
-          <form action="#">
+          <form action="http://localhost:5000/login-form" method="POST">
+            
+            <!-- Log in with Google -->
             <div class="media-options">
               <a href="#" class="field google">
                 <i class="fab fa-google fa-1x google-icon"></i>
-                <span class="google-text">Log in with Google</span>
+                <span class="google-text">Log in with Google</span>rr                                                             
               </a>
             </div>
-
+            
+            <!-- Log in with Phone Number -->
             <div class="media-options">
               <a href="#" class="field phone">
                 <i class="bx bx-phone-call phone-call"></i>
@@ -175,6 +179,7 @@
                 type="email"
                 placeholder="Email or Username"
                 class="input"
+                name="email"
                 required
               />
             </div>
@@ -184,13 +189,14 @@
                 type="password"
                 placeholder="Password"
                 class="password"
+                name="password"
                 required
               />
               <i class="bx bx-hide eye-icon"></i>
             </div>
 
             <div class="form-link">
-              <input type="checkbox" id="checkbox" />
+              <input type="checkbox" id="checkbox"/>
               <label class="keep">Keep me signed in</label>
               <a href="#" class="forgot-pass">Forgot password</a>
             </div>
