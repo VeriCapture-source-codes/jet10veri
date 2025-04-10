@@ -41,13 +41,18 @@
                   />
                 </label>
               </div>
+
+              <!-- Create account link -->
               <a href="create.html" class="closse">Create an account</a>
            </div>
+
            <div class="form-login">
              <header class="header-welcome">Welcome Back</header>
              <p class="welcome">Welcome back, please enter your detail</p>
            </div>
-           <form action="#">
+           
+            <!-- Login Form with Google and Facebook -->
+           <form action="http://localhost:5000/sign-in-user" method="POST">
               <div class="media-options">
                 <a href="#" class="field google">
                   <i class="fab fa-google fa-1x google-icon"></i>
@@ -55,6 +60,7 @@
                 </a>
               </div>
             
+              <!-- Facebook login button -->
               <div class="select-btn">
                 <ul class="options">
                   <li class="option">
@@ -77,6 +83,7 @@
                   type="email"
                   placeholder="Email or Username"
                   id="input"
+                  name="email"
                   autocomplete="Email or username"
                 >
               </div>
@@ -86,17 +93,20 @@
                   type="password"
                   placeholder="Password"
                   id="password"
+                  name="password"
                   autocomplete="current-password"
                 >
                 <img src="./assets/image/bx-hide.png" id="bx-hide" alt="toggle visibility"/>
               </div>
   
+              <!-- Forgot Password link -->
               <div class="form-link">
                 <input type="checkbox" id="checkbox" />
                 <label class="keep">Keep me signed in</label>
                 <a href="./ForgotPassword.html" class="forgot-pass">Forgot Password</a>
               </div>
   
+              <!-- Submit button -->
               <div class="button-field">
                 <button class="submit-button" type="submit">Sign in</button>
               </div>

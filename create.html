@@ -30,7 +30,7 @@
       <div class="form-login2">
         <div class="form-content2">
           <section class="form-content-left2">
-            <form action="#" class="form2">
+            <form action="http://localhost:5000/create-form" method="POST" class="form2">
               <img class="form-img2" src="./assets/image/image 6.png" alt="image" />
               <div class="logo-group">
                 <div class="logo-container2">
@@ -57,6 +57,7 @@
                     type="text"
                     id="first-name"
                     placeholder="First name"
+                    name="first-name"
                     autocomplete="given-name"
                   >
                 </div>
@@ -65,6 +66,7 @@
                     type="text"
                     id="last-name"
                     placeholder="Last name"
+                    name="last-name"
                     autocomplete="family-name"
                   >
                 </div>
@@ -74,6 +76,7 @@
                   <input
                     type="email"
                     placeholder="Email"
+                    name="email"
                     class="input2"
                     autocomplete="email"
                   >
@@ -83,6 +86,7 @@
                   <input
                     type="usename"
                     placeholder="Create Username"
+                    name="username"
                     class="input2"
                     autocomplete="username"
                   >
@@ -93,6 +97,7 @@
                     type="password"
                     placeholder="Enter your password"
                     id="password2"
+                    name="password"
                     autocomplete="current-password"
                   >
                   <img src="./assets/image/bx-hide.png" id="bx-hide2" alt="toggle visibility" />
@@ -130,12 +135,14 @@
                <a href="#" class="forgot-pass2">Terms and Conditions</a>
               </div> 
                    
+              <!-- Create account button -->
               <div class="button-field2">
                 <button type="submit" class="submit2">Create account</button>
               </div>
 
               <div class="line2"></div>
 
+              <!-- Google sign up -->
               <div class="media-options2">
                   <a href="#" class="field2 google2">
                     <i class="fab fa-google fa-1x google-icon2"></i>
@@ -143,6 +150,7 @@
                   </a>
               </div>
 
+              <!-- Facebook sign up -->
               <div class="select-btn2">
                 <ul class="options2">
                   <li class="option2">
