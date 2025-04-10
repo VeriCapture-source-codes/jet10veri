@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector(".form2");
-  const firstName = document.getElementById("first-name");
-  const lastName = document.getElementById("last-name");
+  const firstName = document.getElementById("firstName");
+  const lastName = document.getElementById("lastName");
   const email = document.querySelector("input[type='email']");
-  const username = document.querySelector("input[type='text']"); // Fixed selector
+  const userName = document.querySelector("input[type='text']"); // Fixed selector
   const password = document.getElementById("password2");
   const country = document.querySelector(".select-box2 select");
   const termsCheckbox = document.getElementById("checkbox2");
   const passwordToggle = document.getElementById("bx-hide2");
-  const apiUrl = "https://localhost:5000/api/v1/users/signup"; 
+  const apiUrl = "https://localhost:5000/api/v1/users/create-form";
 
   function showError(input, message) {
     input.style.border = "2px solid red";
@@ -52,13 +52,16 @@ document.addEventListener("DOMContentLoaded", function () {
       valid = false;
     } else clearError(email);
 
-    if (!username.value.trim()) {
-      showError(username, "Username is required");
+    if (!userName.value.trim()) {
+      showError(userName, "Username is required");
       valid = false;
-    } else clearError(username);
+    } else clearError(userName);
 
     if (!validatePassword(password.value)) {
-      showError(password, "Password must be at least 6 characters and contain letters & numbers");
+      showError(
+        password,
+        "Password must be at least 6 characters and contain letters & numbers"
+      );
       valid = false;
     } else clearError(password);
 
@@ -79,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
       firstName: firstName.value.trim(),
       lastName: lastName.value.trim(),
       email: email.value.trim(),
-      username: username.value.trim(),
+      userName: userName.value.trim(),
       password: password.value.trim(),
       country: country.value,
     };

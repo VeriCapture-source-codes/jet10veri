@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const password = document.getElementById("password");
   const passwordToggle = document.getElementById("bx-hide");
   const keepSignedIn = document.getElementById("checkbox");
-  const apiUrl = "https://localhost:5000/api/v1/users/login"; 
+  const apiUrl = "https://localhost:5000/api/v1/users/sign-in-user";
 
   function showError(input, message) {
     input.style.border = "2px solid red";
@@ -12,14 +12,20 @@ document.addEventListener("DOMContentLoaded", function () {
     errorMsg.textContent = message;
     errorMsg.style.color = "red";
     errorMsg.classList.add("error-message");
-    if (!input.nextElementSibling || !input.nextElementSibling.classList.contains("error-message")) {
+    if (
+      !input.nextElementSibling ||
+      !input.nextElementSibling.classList.contains("error-message")
+    ) {
       input.insertAdjacentElement("afterend", errorMsg);
     }
   }
 
   function clearError(input) {
     input.style.border = "1px solid #ccc";
-    if (input.nextElementSibling && input.nextElementSibling.classList.contains("error-message")) {
+    if (
+      input.nextElementSibling &&
+      input.nextElementSibling.classList.contains("error-message")
+    ) {
       input.nextElementSibling.remove();
     }
   }
@@ -44,7 +50,10 @@ document.addEventListener("DOMContentLoaded", function () {
     let valid = true;
 
     if (!validateEmailOrUsername(emailOrUsername.value)) {
-      showError(emailOrUsername, "Enter a valid email or username (min 3 characters)");
+      showError(
+        emailOrUsername,
+        "Enter a valid email or username (min 3 characters)"
+      );
       valid = false;
     } else clearError(emailOrUsername);
 
@@ -57,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const formData = {
         emailOrUsername: emailOrUsername.value.trim(),
         password: password.value.trim(),
-        keepSignedIn: keepSignedIn.checked
+        keepSignedIn: keepSignedIn.checked,
       };
 
       try {
@@ -66,15 +75,18 @@ document.addEventListener("DOMContentLoaded", function () {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(formData),
         });
-        
+
         if (response.ok) {
           const data = await response.json();
           localStorage.setItem("user", JSON.stringify(data));
           alert("Login successful!");
-          window.location.href = "dashboard.html"; 
+          window.location.href = "dashboard.html";
         } else {
           const errorData = await response.json();
-          showError(emailOrUsername, errorData.message || "Invalid credentials");
+          showError(
+            emailOrUsername,
+            errorData.message || "Invalid credentials"
+          );
         }
       } catch (error) {
         alert("Network error, please try again later");

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Create an Account</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,68 +20,77 @@
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"
     />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-      <style>
-        :root {
-          --bg-color: white;
-          --text-color: black;
-          --line-color: #000;
-        }
-        
-        body {
-          background-color: var(--bg-color);
-          color: var(--text-color);
-          transition: all 0.3s ease;
-        }
-        
-        .line2 {
-          position: relative;
-          height: 2px;
-          width: 25%;
-          margin: 23px 847px;
-          background-color: var(--line-color);
-          transition: background-color 0.3s ease;
-        }
-        
-        .line2::after {
-          content: "";
-          position: absolute;
-          left: 0;
-          right: 40px;
-          top: 0;
-          height: 2px;
-          background-color: var(--line-color);
-        }
-        
-        .line2::before {
-          content: "or sign up with";
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          width: 30%;
-          transform: translate(-50%, -50%);
-          padding: 0 10px;
-          background: var(--bg-color);
-          font-size: 12px;
-          font-weight: 600;
-          color: var(--text-color);
-          z-index: 1;
-          transition: all 0.3s ease;
-        }
-      </style>
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg-color: white;
+        --text-color: black;
+        --line-color: #000;
+      }
 
+      body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        transition: all 0.3s ease;
+      }
+
+      .line2 {
+        position: relative;
+        height: 2px;
+        width: 25%;
+        margin: 23px 847px;
+        background-color: var(--line-color);
+        transition: background-color 0.3s ease;
+      }
+
+      .line2::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 40px;
+        top: 0;
+        height: 2px;
+        background-color: var(--line-color);
+      }
+
+      .line2::before {
+        content: "or sign up with";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 30%;
+        transform: translate(-50%, -50%);
+        padding: 0 10px;
+        background: var(--bg-color);
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--text-color);
+        z-index: 1;
+        transition: all 0.3s ease;
+      }
+    </style>
+  </head>
+  <body>
     <section class="container2">
       <div class="form-login2">
         <div class="form-content2">
           <section class="form-content-left2">
-            <form action="http://localhost:5000/create-form" method="POST" class="form2">
-              <img class="form-img2" src="./assets/image/image 6.png" alt="image" />
+            <form
+              action="http://localhost:5000/api/v1/users/create-form"
+              method="POST"
+              class="form2"
+            >
+              <img
+                class="form-img2"
+                src="./assets/image/image 6.png"
+                alt="image"
+              />
               <div class="logo-group">
                 <div class="logo-container2">
-                  <img 
+                  <img
                     class="logo2"
                     src="./assets/image/Data For  Vericapture 2.png"
                     alt="logo2"
@@ -89,33 +98,40 @@
                 </div>
                 <div class="changeContainer3">
                   <label for="image-toggle" class="dark-mode-label3">
-                    <img id="dark-mode-toggle3" src="./assets/image/dark mode.png">
+                    <img
+                      id="dark-mode-toggle3"
+                      src="./assets/image/dark mode.png"
+                    />
                   </label>
                 </div>
               </div>
               <div class="create-account2">
                 <header class="header-create">Create an account</header>
-                <p class="welcome2">Already have an account?<a href="login.html" class="close2">Log in</a></p>
+                <p class="welcome2">
+                  Already have an account?<a href="login.html" class="close2"
+                    >Log in</a
+                  >
+                </p>
               </div>
-              
+
               <div class="form-row">
                 <div class="form-group">
                   <input
                     type="text"
                     id="first-name"
                     placeholder="First name"
-                    name="first-name"
+                    name="firstName"
                     autocomplete="given-name"
-                  >
+                  />
                 </div>
                 <div class="form-group">
                   <input
                     type="text"
                     id="last-name"
                     placeholder="Last name"
-                    name="last-name"
+                    name="lastName"
                     autocomplete="family-name"
-                  >
+                  />
                 </div>
               </div>
               <div class="field2 input-field2-group">
@@ -126,19 +142,19 @@
                     name="email"
                     class="input2"
                     autocomplete="email"
-                  >
+                  />
                 </div>
-              
+
                 <div class="field2 input-field2">
                   <input
-                    type="usename"
+                    type="username"
                     placeholder="Create Username"
-                    name="username"
+                    name="userName"
                     class="input2"
                     autocomplete="username"
-                  >
+                  />
                 </div>
-  
+
                 <div class="field2 input-field2">
                   <input
                     type="password"
@@ -146,10 +162,14 @@
                     id="password2"
                     name="password"
                     autocomplete="current-password"
-                  >
-                  <img src="./assets/image/bx-hide.png" id="bx-hide2" alt="toggle visibility" />
-               </div>
-               <div class="select-box2">
+                  />
+                  <img
+                    src="./assets/image/bx-hide.png"
+                    id="bx-hide2"
+                    alt="toggle visibility"
+                  />
+                </div>
+                <div class="select-box2">
                   <select class="kenya">
                     <option value="country">Select Location</option>
                     <option>Kenya</option>
@@ -177,11 +197,11 @@
                 </div>
               </div>
               <div class="checkbox-group">
-               <input type="checkbox" id="checkbox2" />
-               <span class="keep2">I agree the</span>
-               <a href="#" class="forgot-pass2">Terms and Conditions</a>
-              </div> 
-                   
+                <input type="checkbox" id="checkbox2" />
+                <span class="keep2">I agree the</span>
+                <a href="#" class="forgot-pass2">Terms and Conditions</a>
+              </div>
+
               <!-- Create account button -->
               <div class="button-field2">
                 <button type="submit" class="submit2">Create account</button>
@@ -191,10 +211,10 @@
 
               <!-- Google sign up -->
               <div class="media-options2">
-                  <a href="#" class="field2 google2">
-                    <i class="fab fa-google fa-1x google-icon2"></i>
-                    <span class="google-text2">Sign up with Google</span>
-                  </a>
+                <a href="#" class="field2 google2">
+                  <i class="fab fa-google fa-1x google-icon2"></i>
+                  <span class="google-text2">Sign up with Google</span>
+                </a>
               </div>
 
               <!-- Facebook sign up -->
@@ -202,13 +222,26 @@
                 <ul class="options2">
                   <li class="option2">
                     <a href="#">
-                     <i class="bx bxl-facebook-circle" style="color: #4267b2;"></i>
+                      <i
+                        class="bx bxl-facebook-circle"
+                        style="color: #4267b2"
+                      ></i>
                     </a>
                   </li>
                   <li class="option2">
-                    <a href="#"> 
-                      <svg class="x-image2" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
-                        <path d="M 6.9199219 6 L 21.136719 26.726562 L 6.2285156 44 L 9.40625 44 L 22.544922 28.777344 L 32.986328 44 L 43 44 L 28.123047 22.3125 L 42.203125 6 L 39.027344 6 L 26.716797 20.261719 L 16.933594 6 L 6.9199219 6 z"></path>
+                    <a href="#">
+                      <svg
+                        class="x-image2"
+                        xmlns="http://www.w3.org/2000/svg"
+                        x="0px"
+                        y="0px"
+                        width="100"
+                        height="100"
+                        viewBox="0 0 50 50"
+                      >
+                        <path
+                          d="M 6.9199219 6 L 21.136719 26.726562 L 6.2285156 44 L 9.40625 44 L 22.544922 28.777344 L 32.986328 44 L 43 44 L 28.123047 22.3125 L 42.203125 6 L 39.027344 6 L 26.716797 20.261719 L 16.933594 6 L 6.9199219 6 z"
+                        ></path>
                       </svg>
                     </a>
                   </li>
@@ -221,127 +254,141 @@
     </section>
 
     <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        let bx_hides = document.querySelectorAll('#bx-hide, #bx-hide2');
-        let passwords = document.querySelectorAll('#password, #password2');
-    
+      document.addEventListener("DOMContentLoaded", function () {
+        let bx_hides = document.querySelectorAll("#bx-hide, #bx-hide2");
+        let passwords = document.querySelectorAll("#password, #password2");
+
         if (bx_hides.length === 0 || passwords.length === 0) {
           console.error("Elements not found. Check your IDs.");
         }
-    
+
         bx_hides.forEach((bx_hide, index) => {
-          bx_hide.onclick = function() {
+          bx_hide.onclick = function () {
             let password = passwords[index];
-            if (password.type === 'password') {
-              password.type = 'text';
-              bx_hide.src = 'assets/image/bx-show.png';
+            if (password.type === "password") {
+              password.type = "text";
+              bx_hide.src = "assets/image/bx-show.png";
             } else {
-              password.type = 'password';
-              bx_hide.src = 'assets/image/bx-hide.png';
+              password.type = "password";
+              bx_hide.src = "assets/image/bx-hide.png";
             }
           };
         });
       });
 
-      document.addEventListener('DOMContentLoaded', function() {
-    // 1. SELECT ELEMENTS (only require darkModeToggle3)
-    const elements = {
-        darkModeToggle3: document.getElementById('dark-mode-toggle3'),
-        body: document.body,
-        logo: document.querySelector('.logo2'),
-        container2: document.querySelector('.container2'),
-        formLogin2: document.querySelector('.form-login2'),
-        formContent2: document.querySelector('.form-content2'),
-        formContentLeft2: document.querySelector('.form-content-left2'),
-        line: document.querySelector('.line2')
-    };
+      document.addEventListener("DOMContentLoaded", function () {
+        // 1. SELECT ELEMENTS (only require darkModeToggle3)
+        const elements = {
+          darkModeToggle3: document.getElementById("dark-mode-toggle3"),
+          body: document.body,
+          logo: document.querySelector(".logo2"),
+          container2: document.querySelector(".container2"),
+          formLogin2: document.querySelector(".form-login2"),
+          formContent2: document.querySelector(".form-content2"),
+          formContentLeft2: document.querySelector(".form-content-left2"),
+          line: document.querySelector(".line2"),
+        };
 
-   // 2. CHECK CRITICAL ELEMENTS (now only requiring toggle3)
-    if (!elements.darkModeToggle3 || !elements.body || !elements.logo) {
-        console.error('Missing critical elements!');
-        console.log('Elements status:', {
+        // 2. CHECK CRITICAL ELEMENTS (now only requiring toggle3)
+        if (!elements.darkModeToggle3 || !elements.body || !elements.logo) {
+          console.error("Missing critical elements!");
+          console.log("Elements status:", {
             darkModeToggle3: !!elements.darkModeToggle3,
             body: !!elements.body,
-            logo: !!elements.logo
-        });
-        return;
-    }
+            logo: !!elements.logo,
+          });
+          return;
+        }
 
-    // 3. IMAGE PATHS (no spaces!)
-    const images = {
-       defaultLogoSrc: './assets/image/Data For  Vericapture 2.png',
-       alternateLogoSrc: './assets/image/logosss___2_-removebg-preview 1.png',
-       darkModeImage: './assets/image/dark mode.png',
-       lightModeImage: './assets/image/Property 1=Sun.png'
-    };
+        // 3. IMAGE PATHS (no spaces!)
+        const images = {
+          defaultLogoSrc: "./assets/image/Data For  Vericapture 2.png",
+          alternateLogoSrc:
+            "./assets/image/logosss___2_-removebg-preview 1.png",
+          darkModeImage: "./assets/image/dark mode.png",
+          lightModeImage: "./assets/image/Property 1=Sun.png",
+        };
 
-    // 4. STATE MANAGEMENT
-    let isDarkMode = false;
+        // 4. STATE MANAGEMENT
+        let isDarkMode = false;
 
-    function toggleDarkMode() {
-        isDarkMode = !isDarkMode;
-        applyDarkMode(isDarkMode);
-    }
+        function toggleDarkMode() {
+          isDarkMode = !isDarkMode;
+          applyDarkMode(isDarkMode);
+        }
 
-    function applyDarkMode(shouldBeDark) {
-        if (shouldBeDark) {
+        function applyDarkMode(shouldBeDark) {
+          if (shouldBeDark) {
             // DARK MODE
-            elements.body.style.backgroundColor = 'black';
-            elements.body.style.color = 'white';
-            
+            elements.body.style.backgroundColor = "black";
+            elements.body.style.color = "white";
+
             elements.logo.src = images.alternateLogoSrc;
             elements.darkModeToggle3.src = images.lightModeImage;
 
             // Style optional elements if they exist
-            [container2, formLogin2, formContent2, formContentLeft2, line].forEach(el => {
-                if (el) {
-                    el.style.backgroundColor = 'black';
-                    el.style.color = 'white';
-                }
+            [
+              container2,
+              formLogin2,
+              formContent2,
+              formContentLeft2,
+              line,
+            ].forEach((el) => {
+              if (el) {
+                el.style.backgroundColor = "black";
+                el.style.color = "white";
+              }
             });
-        } else {
+          } else {
             // LIGHT MODE
-            elements.body.style.backgroundColor = 'white';
-            elements.body.style.color = 'black';
-            
+            elements.body.style.backgroundColor = "white";
+            elements.body.style.color = "black";
+
             elements.logo.src = images.defaultLogoSrc;
             elements.darkModeToggle3.src = images.darkModeImage;
 
             // Reset optional elements
-            [container2, formLogin2, formContent2, formContentLeft2, line].forEach(el => {
-                if (el) {
-                    el.style.backgroundColor = 'white';
-                    el.style.color = 'black';
-                }
+            [
+              container2,
+              formLogin2,
+              formContent2,
+              formContentLeft2,
+              line,
+            ].forEach((el) => {
+              if (el) {
+                el.style.backgroundColor = "white";
+                el.style.color = "black";
+              }
             });
+          }
         }
-    }
 
-    // 5. EVENT LISTENER (only for the existing toggle)
-    elements.darkModeToggle3.addEventListener('click', toggleDarkMode);
-});
+        // 5. EVENT LISTENER (only for the existing toggle)
+        elements.darkModeToggle3.addEventListener("click", toggleDarkMode);
+      });
 
- // Your existing JavaScript with the updated applyDarkMode function
- function applyDarkMode(shouldBeDark) {
-      const root = document.documentElement;
-      
-      if (shouldBeDark) {
-        root.style.setProperty('--bg-color', 'black');
-        root.style.setProperty('--text-color', 'white');
-        root.style.setProperty('--line-color', '#333');
-      } else {
-        root.style.setProperty('--bg-color', 'white');
-        root.style.setProperty('--text-color', 'black');
-        root.style.setProperty('--line-color', '#000');
+      // Your existing JavaScript with the updated applyDarkMode function
+      function applyDarkMode(shouldBeDark) {
+        const root = document.documentElement;
+
+        if (shouldBeDark) {
+          root.style.setProperty("--bg-color", "black");
+          root.style.setProperty("--text-color", "white");
+          root.style.setProperty("--line-color", "#333");
+        } else {
+          root.style.setProperty("--bg-color", "white");
+          root.style.setProperty("--text-color", "black");
+          root.style.setProperty("--line-color", "#000");
+        }
       }
-    }
-    
-    // Example toggle (you would connect this to your button)
-    let darkMode = false;
-    function toggleDarkMode() {
-      darkMode = !darkMode;
-      applyDarkMode(darkMode);
-    }
+
+      // Example toggle (you would connect this to your button)
+      let darkMode = false;
+      function toggleDarkMode() {
+        darkMode = !darkMode;
+        applyDarkMode(darkMode);
+      }
     </script>
+    <!-- <script src="./scripts/signup.js"></script> -->
   </body>
 </html>

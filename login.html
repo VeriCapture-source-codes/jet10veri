@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,10 +20,8 @@
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"
     />
-    
-</head>
-<body>
-     
+  </head>
+  <body>
     <section id="container-forms">
       <div class="form-login">
         <div id="form-content">
@@ -37,57 +35,76 @@
               />
               <div class="changeContainer2">
                 <label class="dark-mode-label2" for="image-toggle">
-                  <img src="./assets/image/dark mode.png" alt="dark mode" id="dark-mode-toggle2"
+                  <img
+                    src="./assets/image/dark mode.png"
+                    alt="dark mode"
+                    id="dark-mode-toggle2"
                   />
                 </label>
               </div>
 
               <!-- Create account link -->
               <a href="create.html" class="closse">Create an account</a>
-           </div>
+            </div>
 
-           <div class="form-login">
-             <header class="header-welcome">Welcome Back</header>
-             <p class="welcome">Welcome back, please enter your detail</p>
-           </div>
-           
+            <div class="form-login">
+              <header class="header-welcome">Welcome Back</header>
+              <p class="welcome">Welcome back, please enter your detail</p>
+            </div>
+
             <!-- Login Form with Google and Facebook -->
-           <form action="http://localhost:5000/sign-in-user" method="POST">
+            <form
+              action="http://localhost:5000/api/v1/users/sign-in-user"
+              method="POST"
+            >
               <div class="media-options">
                 <a href="#" class="field google">
                   <i class="fab fa-google fa-1x google-icon"></i>
                   <span class="google-text">Log in with Google</span>
                 </a>
               </div>
-            
+
               <!-- Facebook login button -->
               <div class="select-btn">
                 <ul class="options">
                   <li class="option">
                     <a href="#">
-                      <i class="bx bxl-facebook-circle" style="color: #4267b2;"></i>
+                      <i
+                        class="bx bxl-facebook-circle"
+                        style="color: #4267b2"
+                      ></i>
                     </a>
                   </li>
                   <li class="option">
-                    <a href="#"> 
-                      <svg class="x-image" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
-                        <path d="M 6.9199219 6 L 21.136719 26.726562 L 6.2285156 44 L 9.40625 44 L 22.544922 28.777344 L 32.986328 44 L 43 44 L 28.123047 22.3125 L 42.203125 6 L 39.027344 6 L 26.716797 20.261719 L 16.933594 6 L 6.9199219 6 z"></path>
+                    <a href="#">
+                      <svg
+                        class="x-image"
+                        xmlns="http://www.w3.org/2000/svg"
+                        x="0px"
+                        y="0px"
+                        width="100"
+                        height="100"
+                        viewBox="0 0 50 50"
+                      >
+                        <path
+                          d="M 6.9199219 6 L 21.136719 26.726562 L 6.2285156 44 L 9.40625 44 L 22.544922 28.777344 L 32.986328 44 L 43 44 L 28.123047 22.3125 L 42.203125 6 L 39.027344 6 L 26.716797 20.261719 L 16.933594 6 L 6.9199219 6 z"
+                        ></path>
                       </svg>
                     </a>
                   </li>
                 </ul>
               </div>
-             <div id="line"></div>
-             <div class="field input-field">
-                <input 
+              <div id="line"></div>
+              <div class="field input-field">
+                <input
                   type="email"
                   placeholder="Email or Username"
                   id="input"
                   name="email"
                   autocomplete="Email or username"
-                >
+                />
               </div>
-  
+
               <div class="field input-field">
                 <input
                   type="password"
@@ -95,17 +112,23 @@
                   id="password"
                   name="password"
                   autocomplete="current-password"
-                >
-                <img src="./assets/image/bx-hide.png" id="bx-hide" alt="toggle visibility"/>
+                />
+                <img
+                  src="./assets/image/bx-hide.png"
+                  id="bx-hide"
+                  alt="toggle visibility"
+                />
               </div>
-  
+
               <!-- Forgot Password link -->
               <div class="form-link">
                 <input type="checkbox" id="checkbox" />
                 <label class="keep">Keep me signed in</label>
-                <a href="./ForgotPassword.html" class="forgot-pass">Forgot Password</a>
+                <a href="./ForgotPassword.html" class="forgot-pass"
+                  >Forgot Password</a
+                >
               </div>
-  
+
               <!-- Submit button -->
               <div class="button-field">
                 <button class="submit-button" type="submit">Sign in</button>
@@ -116,149 +139,184 @@
       </div>
     </section>
 
-      <script>
-        document.addEventListener("DOMContentLoaded", function() {
-          let bx_hides = document.querySelectorAll('#bx-hide, #bx-hide2');
-          let passwords = document.querySelectorAll('#password, #password2');
-      
-          if (bx_hides.length === 0 || passwords.length === 0) {
-            console.error("Elements not found. Check your IDs.");
-          }
-      
-          bx_hides.forEach((bx_hide, index) => {
-            bx_hide.onclick = function() {
-              let password = passwords[index];
-              if (password.type === 'password') {
-                password.type = 'text';
-                bx_hide.src = 'assets/image/bx-show.png';
-              } else {
-                password.type = 'password';
-                bx_hide.src = 'assets/image/bx-hide.png';
-              }
-            };
-          });
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let bx_hides = document.querySelectorAll("#bx-hide, #bx-hide2");
+        let passwords = document.querySelectorAll("#password, #password2");
+
+        if (bx_hides.length === 0 || passwords.length === 0) {
+          console.error("Elements not found. Check your IDs.");
+        }
+
+        bx_hides.forEach((bx_hide, index) => {
+          bx_hide.onclick = function () {
+            let password = passwords[index];
+            if (password.type === "password") {
+              password.type = "text";
+              bx_hide.src = "assets/image/bx-show.png";
+            } else {
+              password.type = "password";
+              bx_hide.src = "assets/image/bx-hide.png";
+            }
+          };
         });
+      });
 
-              
-document.addEventListener('DOMContentLoaded', function(){     
-    // Elements   
-const darkModeToggle = document.getElementById('dark-mode-toggle');
-const darkModeToggle2 = document.getElementById('dark-mode-toggle2');
-const containerForms = document.getElementById('container-forms');
-const body = document.querySelector('body');
-const formContent = document.getElementById('form-content');
-const closse = document.querySelector('.closse');
-const a = document.querySelector('a');
-const line = document.getElementById('line');
-const keep = document.querySelector('.keep');
-const logo = document.getElementById('logo');
-const fieldButton = document.querySelector('.field button-field');
+      document.addEventListener("DOMContentLoaded", function () {
+        // Elements
+        const darkModeToggle = document.getElementById("dark-mode-toggle");
+        const darkModeToggle2 = document.getElementById("dark-mode-toggle2");
+        const containerForms = document.getElementById("container-forms");
+        const body = document.querySelector("body");
+        const formContent = document.getElementById("form-content");
+        const closse = document.querySelector(".closse");
+        const a = document.querySelector("a");
+        const line = document.getElementById("line");
+        const keep = document.querySelector(".keep");
+        const logo = document.getElementById("logo");
+        const fieldButton = document.querySelector(".field button-field");
 
-// Only proceed if required elements exist
-if (!darkModeToggle || !darkModeToggle2 || !body || !containerForms || !logo || !a || !closse || !formContent || !keep|| !line || !fieldButton) {
-    console.error('Essential elements not found!');
-}
+        // Only proceed if required elements exist
+        if (
+          !darkModeToggle ||
+          !darkModeToggle2 ||
+          !body ||
+          !containerForms ||
+          !logo ||
+          !a ||
+          !closse ||
+          !formContent ||
+          !keep ||
+          !line ||
+          !fieldButton
+        ) {
+          console.error("Essential elements not found!");
+        }
 
-// Image paths
-const defaultLogoSrc = "./assets/image/Data For  Vericapture 2.png";
-const alternateLogoSrc = "./assets/image/logosss___2_-removebg-preview 1.png";
-const darkModeImage = './assets/image/dark mode.png';
-const lightModeImage = './assets/image/Property 1=Sun.png';
+        // Image paths
+        const defaultLogoSrc = "./assets/image/Data For  Vericapture 2.png";
+        const alternateLogoSrc =
+          "./assets/image/logosss___2_-removebg-preview 1.png";
+        const darkModeImage = "./assets/image/dark mode.png";
+        const lightModeImage = "./assets/image/Property 1=Sun.png";
 
-//load saved state
-let isDarkMode = false;
-try {
-    isDarkMode = localStorage.getItem('darkMode') === 'true';
-} catch (e) {
-    console.warn("Couldn't access localStorage:", e);
-}
+        //load saved state
+        let isDarkMode = false;
+        try {
+          isDarkMode = localStorage.getItem("darkMode") === "true";
+        } catch (e) {
+          console.warn("Couldn't access localStorage:", e);
+        }
 
-// Apply the saved state immediately when page loads
-applyDarkMode(isDarkMode);
+        // Apply the saved state immediately when page loads
+        applyDarkMode(isDarkMode);
 
-function toggleDarkMode() {
-    isDarkMode = !isDarkMode; // Toggle state
-  try {
-    localStorage.setItem('darkMode', isDarkMode); // Save state
-  } catch (e) {
-    console.warn("Couldn't save to localStorage:", e);
-  }
-    applyDarkMode(isDarkMode); // Apply state
-}
+        function toggleDarkMode() {
+          isDarkMode = !isDarkMode; // Toggle state
+          try {
+            localStorage.setItem("darkMode", isDarkMode); // Save state
+          } catch (e) {
+            console.warn("Couldn't save to localStorage:", e);
+          }
+          applyDarkMode(isDarkMode); // Apply state
+        }
 
-function applyDarkMode(shouldBeDark) {
-    // Handle image loading errors
-  const handleImageError = (img, altSrc) => {
+        function applyDarkMode(shouldBeDark) {
+          // Handle image loading errors
+          const handleImageError = (img, altSrc) => {
             img.onerror = null; // Prevent infinite loop
             console.error("Failed to load image:", img.src);
             if (altSrc) img.src = altSrc;
-        };
+          };
 
-    if (shouldBeDark) {
-        // Apply dark mode
-        document.documentElement.style.setProperty('--bg-color', 'black');
-        document.documentElement.style.setProperty('--text-color', 'white');
-        
-        // Update logo and toggle images
-        if (logo) {
-          logo.src = alternateLogoSrc;
-          logo.onerror = () => handleImageError(logo, defaultLogoSrc);
-        }
+          if (shouldBeDark) {
+            // Apply dark mode
+            document.documentElement.style.setProperty("--bg-color", "black");
+            document.documentElement.style.setProperty("--text-color", "white");
 
-        if (darkModeToggle) {
-          darkModeToggle.src = lightModeImage;
-          darkModeToggle.onerror = () => handleImageError(darkModeToggle, darkModeImage);
-        }
-        if (darkModeToggle2) {
-          darkModeToggle2.src = lightModeImage;
-          darkModeToggle2.onerror = () => handleImageError(darkModeToggle2, darkModeImage);
-        }
-        
-        // Update element styles
-        const elements = [body, containerForms, logo, a, closse, formContent, keep, line, fieldButton];
-        elements.forEach(el => {
-            if (el) {
-                el.style.backgroundColor = 'black';
-                el.style.color = 'white';
+            // Update logo and toggle images
+            if (logo) {
+              logo.src = alternateLogoSrc;
+              logo.onerror = () => handleImageError(logo, defaultLogoSrc);
             }
-        });
-        
-        // Update form styles
-        if (line) {
-            const anchors = line.querySelectorAll('line');
-            anchors.forEach(line => line.style.color = 'white');
-        }
-    } else {
-        // Apply light mode
-        document.documentElement.style.setProperty('--bg-color', 'white');
-        document.documentElement.style.setProperty('--text-color', 'black');
-        
-        // Reset images
-        if (logo) logo.src = defaultLogoSrc;
-        if (darkModeToggle) darkModeToggle.src = darkModeImage;
-        if (darkModeToggle2) darkModeToggle2.src = darkModeImage;
-        
-        // Reset element styles
-        const elements = [body, containerForms, logo, a, closse, formContent, keep, line, fieldButton];
-        elements.forEach(el => {
-            if (el) {
-                el.style.backgroundColor = 'white';
-                el.style.color = 'black';
+
+            if (darkModeToggle) {
+              darkModeToggle.src = lightModeImage;
+              darkModeToggle.onerror = () =>
+                handleImageError(darkModeToggle, darkModeImage);
             }
-        });
-        
-        // Reset links
-        if (line) {
-            const anchors = line.querySelectorAll('line');
-            anchors.forEach(line => line.style.color = 'black');
+            if (darkModeToggle2) {
+              darkModeToggle2.src = lightModeImage;
+              darkModeToggle2.onerror = () =>
+                handleImageError(darkModeToggle2, darkModeImage);
+            }
+
+            // Update element styles
+            const elements = [
+              body,
+              containerForms,
+              logo,
+              a,
+              closse,
+              formContent,
+              keep,
+              line,
+              fieldButton,
+            ];
+            elements.forEach((el) => {
+              if (el) {
+                el.style.backgroundColor = "black";
+                el.style.color = "white";
+              }
+            });
+
+            // Update form styles
+            if (line) {
+              const anchors = line.querySelectorAll("line");
+              anchors.forEach((line) => (line.style.color = "white"));
+            }
+          } else {
+            // Apply light mode
+            document.documentElement.style.setProperty("--bg-color", "white");
+            document.documentElement.style.setProperty("--text-color", "black");
+
+            // Reset images
+            if (logo) logo.src = defaultLogoSrc;
+            if (darkModeToggle) darkModeToggle.src = darkModeImage;
+            if (darkModeToggle2) darkModeToggle2.src = darkModeImage;
+
+            // Reset element styles
+            const elements = [
+              body,
+              containerForms,
+              logo,
+              a,
+              closse,
+              formContent,
+              keep,
+              line,
+              fieldButton,
+            ];
+            elements.forEach((el) => {
+              if (el) {
+                el.style.backgroundColor = "white";
+                el.style.color = "black";
+              }
+            });
+
+            // Reset links
+            if (line) {
+              const anchors = line.querySelectorAll("line");
+              anchors.forEach((line) => (line.style.color = "black"));
+            }
+          }
         }
-    }
-}
-// Event listeners
-if (darkModeToggle) darkModeToggle.addEventListener('click', toggleDarkMode);
-if (darkModeToggle2) darkModeToggle2.addEventListener('click', toggleDarkMode);
-});
-</script>
-      
-</body>
+        // Event listeners
+        if (darkModeToggle)
+          darkModeToggle.addEventListener("click", toggleDarkMode);
+        if (darkModeToggle2)
+          darkModeToggle2.addEventListener("click", toggleDarkMode);
+      });
+    </script>
+  </body>
 </html>
