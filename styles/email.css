@@ -1,0 +1,141 @@
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+/* Font Awesome */
+* {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+/* Add this to your CSS */
+body, html {
+  width: 100%;
+  min-width: 100%;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+  font-family: "Open Sans", sans-serif;
+  background-color: #e7e7e7;
+  color: #333;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* Check Email Styles */
+.reset-code-container {
+    border: 1px solid #62c6f5c5;
+    border-radius: 8px;
+    height: 41.2rem;
+    width: 84.3rem;
+  }
+  .logo-contain {
+   display: flex;
+    margin: 10px 10px;
+    padding: 10px;
+  }
+  .container{
+    text-align: center;
+    padding: 30px;
+    width: 500px;
+    margin: 0 auto;
+  }
+  
+  .check-mail-header{
+    display: flex;
+    width: 30rem;
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: -60px;
+    margin-bottom: 20px;  
+  }
+  .icon img{
+    width: 40px;
+    margin-bottom: 15px;  
+  }
+  .email-icon{
+    width: 120px;
+    height: 55px;
+    margin-bottom: 20px;
+  }
+  .email-text{
+    width: 30rem;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: normal;
+    margin-right: 0px;
+  }
+  
+  .email{
+    margin-top: 10px;
+    font-size: 18px;  
+    
+  }
+  
+  .otp-input{
+    display: flex;  
+    justify-content: center;
+    margin: 15px 0;
+  }
+  
+  .otp-input input{
+    width: 50px;
+    height: 50px;
+    margin: 0 5px;
+    text-align: center;
+    font-size: 16px;  
+    border: 1px solid #ccc;
+    border-radius:5px;
+  }
+  
+  .otp-input input:focus{
+    border: 1px solid #a2a2a2;
+  } 
+  
+  .resend-text{
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .resend-link{
+    color: #000;
+    text-decoration: none;
+    font-weight:500;
+    font-size: 18px;
+  }
+  
+  .verify-btn{
+    background-color: #a2a2a2;
+    color: #fff;
+    border: none;
+    padding: 13px;
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 5px 0;
+  }
+  
+  .verify-btn:hover{
+    background-color: #7a7a7a;
+  } 
+  .back-arrow-img3{
+    position: relative;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    right: 3px;
+    top: 6px;
+  }
+  .back-link{
+    display: block;
+    font-size: 14px;
+    text-decoration: none;
+    color: #2b4255;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .back-link:hover{
+    text-decoration: underline;
+  } 
