@@ -20,9 +20,10 @@
         <img class="email-icon" src="./assets/image/fa-solid_paper-plane.png" alt="email-icon">
       </div>
       <p class="email-text">We have sent a 6-digit code to the Email Address</p>
-      <p class="email">**********99@gmail.com</p>
-    
-      <div class="otp-input">
+      <form id="otp-form" action="https://localhost:5000/api/v1/users/reset-password" method="POST">
+        <input type="hidden" name="email" id="user-email">
+      
+        <div class="otp-input">
         <input type="text" maxlenght="1">
         <input type="text" maxlenght="1">
         <input type="text" maxlenght="1">
@@ -30,10 +31,8 @@
         <input type="text" maxlenght="1">
         <input type="text" maxlenght="1">
       </div>
-    
-      <p class="resend-text">Didn't get a code? <a href="#" class="resend-link">Resend code</a></p>
-    
-      <button class="verify-btn">Verify code</button>
+    <button class="verify-btn">Verify code</button>
+      </form>
       <a href="./login.html" class="back-link"><img class="back-arrow-img3" src="./assets/image/back arrow.png" alt="back arrow">BACK TO LOGIN</a>
       
     </div>

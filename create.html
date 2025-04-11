@@ -79,7 +79,7 @@
         <div class="form-content2">
           <section class="form-content-left2">
             <form
-              action="http://localhost:5000/api/v1/users/create-form"
+              action="http://localhost:5000/api/v1/users/register"
               method="POST"
               class="form2"
             >
@@ -119,7 +119,7 @@
                   <input
                     type="text"
                     id="first-name"
-                    placeholder="First name"
+                    placeholder="First Name"
                     name="firstName"
                     autocomplete="given-name"
                   />
@@ -128,7 +128,7 @@
                   <input
                     type="text"
                     id="last-name"
-                    placeholder="Last name"
+                    placeholder="Last Name"
                     name="lastName"
                     autocomplete="family-name"
                   />
@@ -171,28 +171,28 @@
                 </div>
                 <div class="select-box2">
                   <select class="kenya">
-                    <option value="country">Select Location</option>
-                    <option>Kenya</option>
-                    <option>Uganda</option>
-                    <option>Zimbabwe</option>
-                    <option>Indonesia</option>
-                    <option>Benin</option>
-                    <option>Ghana</option>
-                    <option>Russia</option>
-                    <option>Uk</option>
-                    <option>Brazil</option>
-                    <option>Botswana</option>
-                    <option>South Africa</option>
-                    <option>Togo</option>
-                    <option>Cameroon</option>
-                    <option>Angola</option>
-                    <option>France</option>
-                    <option>Germany</option>
-                    <option>India</option>
-                    <option>China</option>
-                    <option>United States</option>
-                    <option>Nigeria</option>
-                    <option>Brazil</option>
+                    <option value="#">Select Location</option>
+                    <option value="kenya">Kenya</option>
+                    <option value="uganda">Uganda</option>
+                    <option value="zimbabwe">Zimbabwe</option>
+                    <option value="indonesia">Indonesia</option>
+                    <option value="benin">Benin</option>
+                    <option value="ghana">Ghana</option>
+                    <option value="russia">Russia</option>
+                    <option value="england">England</option>
+                    <option value="brazil">Brazil</option>
+                    <option value="botswana">Botswana</option>
+                    <option value="south africa">South Africa</option>
+                    <option value="togo">Togo</option>
+                    <option value="cameroon">Cameroon</option>
+                    <option value="angola">Angola</option>
+                    <option value="france">France</option>
+                    <option value="germany">Germany</option>
+                    <option value="india">India</option>
+                    <option value="china">China</option>
+                    <option value="united states">United States</option>
+                    <option value="nigeria">Nigeria</option>
+                    <option value="porturgal">Porturgal</option>
                   </select>
                 </div>
               </div>
@@ -340,6 +340,7 @@
               }
             });
           } else {
+            
             // LIGHT MODE
             elements.body.style.backgroundColor = "white";
             elements.body.style.color = "black";

@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const password = document.getElementById("password");
   const passwordToggle = document.getElementById("bx-hide");
   const keepSignedIn = document.getElementById("checkbox");
-  const apiUrl = "https://localhost:5000/api/v1/users/sign-in-user";
+  const apiUrl = "https://localhost:5000/api/v1/users/login";
 
   function showError(input, message) {
     input.style.border = "2px solid red";
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function validateEmailOrUsername(value) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(value) || value.trim().length >= 3; // Accepts either valid email or min 3-char username
+    return emailRegex.test(value) || value.trim().length >= 3; 
   }
 
   function validatePassword(value) {
