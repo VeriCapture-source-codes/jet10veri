@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vericapture Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@300;400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/profile.css"/>
+    <!-- Boxicons CSS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"
+    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation bar for the website -->
+    <nav id="nav2">
+        <!-- Logo for the website -->
+        <ul class="nav-list">
+            <li>
+              <label>
+                  <img class="logo2"
+                     src="./assets/image/Data For  Vericapture 2.png"
+                     alt="logo" 
+                    />
+              </label>
+            </li>
+            <li>
+               <p class="veri">Vericapture</p>
+            </li>
+            <li>
+               <div class="changeContainer">
+                  <label for="image-toggle" class="dark-mode-label4">
+                     <img src="./assets/image/dark mode.png" alt="dark mode" id="dark-mode-toggle4"
+                      />
+                  </label>
+                </div>
+           </li>
+           <li>
+               <div class="ellipse1-container">
+                  <img src="./assets/image/Ellipse 1.png" alt="Ellipse 1" class="ellipse-img" />
+               </div>
+           </li>
+        </ul>
+    </nav>
+   
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <img src="./assets/image/Ellipse 1.png" alt="Ellipse 1" class="ellipse-img4" />
+            <p class="stephen-ned">Stephen Ned</p>
+            <p class="anambra">Awka Anambra</p>
+            <a href="#">
+              <img src="./assets/image/front arrow.png" alt="front arrow" class="front-arrow">
+            </a>
+        </div>
+
+        <ul class="menu">
+            <li>
+                <a href="./index.html"><img src="./assets/image/House.png" alt="Home"> Home</a>
+            </li>
+            <li>
+                <a href="./explore.html"><img src="./assets/image/Explore.png" alt="Explore"> Explore</a>
+            </li>
+            <li>
+                <a href="#"><img src="./assets/image/Vector (17).png" alt="Notification"> Notification</a>
+            </li>
+            <li class="active">
+                <a href="#"><img src="./assets/image/Vector (18).png" alt="Profile"> Profile</a>
+            </li>
+            <li>
+                <a href="#"><img src="./assets/image/Gear.png" alt="Settings"> Settings</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- My Profile Content-->
+    <div class="profile-container">
+       <label>My Profile</label>
+       <div class="my-profile-container">
+            <div class="content">
+                <button class="bik-button"><img class="bik" src="./assets/image/Vector (26).png" alt="bik" /></button>
+                <img src="./assets/image/Ellipse 1.png" alt="Ellipse 1" class="ellipse-img6"/>
+                <span class="valentine-anthony">Valentine Anthony Emeka</span>
+                <img class="vector-img6" src="./assets/image/Vector (12).png" alt="Oshodi Lagos" >
+                <p class="oshodi-lagos">Oshodi Lagos, Nigeria</p>
+            </div>
+       </div>
+       <div class="edit-container">
+          <table id="edit-content" >
+                <caption class="edit-para">Personal Information</caption>
+                <button class="edit-button">Edit<img class="edit-image" src="./assets/image/Vector (19).png" alt="edit"/></button>
+                <hr class="line-explore"/>
+              
+                <tbody>
+                    <tr>
+                        <th>First name</th>
+                        <th >Middle name</th>
+                        <th >Last name</th>
+                    </tr> 
+                    <tr>
+                       <td>Valentine</td>
+                        <td>Anthony</td>
+                        <td>Emeka</td>
+                    </tr>  
+                 <!-- Empty row for spacing -->
+                 <tr><td colspan="3" style="height: 30px;"></td></tr>
+                    <tr>
+                        <th>Email Address</th>
+                        <th>Phone Number</th>
+                        <th >Gender</th>  
+                    </tr>
+                
+                    <tr class="Valentine68">
+                        <td>Valentine68@gmail.com</td>
+                         <td>+23481234567</td>
+                         <td>Male</td>
+                     </tr>  
+                </tbody>
+              
+          </table>
+        </div>
+        <div class="edit-container2">
+            <table id="edit-content2" >
+                <caption class="edit-para2">Address</caption>
+                <button class="edit-button2">Edit<img class="edit-image2" src="./assets/image/Vector (26).png" alt="edit"/></button>
+                <hr class="line-explore2"/>
+                    
+                <tbody class="body2">
+                    <tr>
+                        <th>Country</th>
+                        <th>State</th>
+                        <th class="th2">Town</th>
+                    </tr> 
+                    <tr>
+                        <td>Nigeria</td>
+                        <td>Lagos</td>
+                        <td class="td2">Oshodi</td>
+                    </tr>  
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
