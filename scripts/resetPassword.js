@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       
-      const apiUrl = "https://localhost:5000/api/v1/users/set-password";
+      const apiUrl = "https://localhost:5000/api/v1/users/reset-password";
 
       const requestData = {
           newPassword: newPasswordInput.value,
