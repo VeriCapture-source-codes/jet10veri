@@ -22,7 +22,7 @@
     />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-
+      
 </head>
 <body>
      <!-- Navigation bar for the website -->
@@ -152,26 +152,26 @@
                </div>
            </div>
         </div> 
-        <div class="update-container">
-            <img src="./assets/image/Ellipse 1.png" alt="Ellipse 1" class="ellipse-update" />
-            <input class="update-input" type="text" name="update" placeholder="Post an update" />
-            <button class="videocam-btn"><a href="#"><img class="camera" src="./assets/image/Videocam.png" alt="videocam"></a>Go Live</button>
-            <div if="isModalOpen" class="modal-overlay">
-                <div class="modal-content">
-                  <h2 class="upload-video">Upload a live Video</h2>
-                  <p class="Kindly">Kindly click the capture icon to start recording your <span class="video-photo">video or take a photo</span></p>
-                  <label class="camera-label">
-                     <button class="camera-button"><img class="video-photo-img" src="./assets/image/Vector (24).png" alt="video or photo image"></button>
-                     <p class="open-camera">click to open camera</p>
-                  </label>
-                  <button class="add-caption">Click to add caption</button>
-                  <div class="modal-actions">
-                      <button @click="isModalOpen = false" class="cancel-button">Cancel</button>
-                      <button @click="handleCreateTodo" class="capture-button">Capture</button>
-                   </div>
-                </div>
-            </div>
+        <!-- Update Container -->
+     <div class="update-container">
+        <div class="update-input">
+            <img class="ellipse-update" id="user-avatar" src="https://via.placeholder.com/40" alt="User avatar">
+            <input type="text" id="post-input" placeholder="Post an update...">
         </div>
+        <div class="update-actions">
+            <button class="action-button">
+                <i class="material-icons">photo_camera</i>
+                Photo
+            </button>
+            <button class="action-button">
+                <i class="material-icons">video_library</i>
+                Video
+            </button>
+            <button class="action-button videocam-btn">
+                Go Live <i class="material-icons">videocam</i>
+            </button>
+        </div>
+    </div>
         
         <div class="tweet-card2">
             <div class="tweet-header2">

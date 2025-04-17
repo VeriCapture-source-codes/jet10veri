@@ -358,7 +358,7 @@ p {
   font-size: 14px;
   font-weight: bold;
   width: 100%;
-  margin-top: -55px;
+  margin-top: -50px;
   margin-left: -150px;
   color: auto;
 }
@@ -368,23 +368,21 @@ p {
   font-size: 12px;
   color: grey;
   position: relative;
-  top: -65px;
-  left: 20px;
+  top: -24px;
+  right: 39px;
 }
 
 .tweet-header 
 .traffic-button{
   background-color: rgb(218, 204, 14);
-  padding: 2px 12px;
+  padding: 5px 12px;
   border: none;
   border-radius: 15px;
-  margin: 0px -20px 0px;
-  margin-left: 170px;
   font-weight: bold;
   cursor: pointer;
   position: relative;
-  top: -65px;
-  left: 10px;
+  top: -25px;
+  left: 110px;
 }
 
 .traffic-button:hover{
@@ -398,49 +396,49 @@ p {
   background: #fff;
   border-radius: 50%;
   position: relative;
-  top: -40px;
-  right: 287px;
+  top: 0px;
+  right: 212px;
 }
 .tweet-header 
 .awka{
   position: relative;
   font-size: 13px;
-  top: -75px;
+  top: -37px;
   right: 126px;
 }
 #fuel {
   position: relative;
   width: 92%;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 500;
-  left: 0px;
-  top: -100px;
+  left: 19px;
+  top: -20px;
   color: #000;
 }
 #on-awka{
   display: flex;
   position: relative;
   text-align: left;
-  left: 53px;
+  left: 32px;
   top: 3px;
 }
 .traffic{
   font-family: 'Lexend', sans-serif;
 }
 .traffic-image{
-  width: 89%;
+  width: 86%;
   display: block;
   position: relative;
-  left: 25px;
-  top: -120px;
+  left: 32px;
+  top: -10px;
 }
 .traffic-ratings-container{
   display: flex;
   justify-content: start;
   position: relative;
-  top: -120px;
+  top: -10px;
   padding: 12px 0;
-  left: 10px;
+  left: 18px;
 }
 .traffic-rating{
   display: flex;
