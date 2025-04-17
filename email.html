@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <title>Vericapture Email Reset Code</title>
     <link rel="stylesheet" href="./styles/email.css">
+    <link rel="icon" href="./assets/image/vericapture favicon.png">
+    <title>Vericapture Email Reset Code</title>
+    
 </head>
 <body>
     <div class="reset-code-container">
@@ -33,6 +35,16 @@
       </div>
     <button class="verify-btn">Verify code</button>
       </form>
+
+      <!-- Error and Sucess message -->
+      <p id="success-message" style="color: green; font-weight: 500; display: none; margin-top: 1rem;"></p>
+      <p id="error-message" style="color: red; font-weight: 500; display: none; margin-top: 1rem;"></p>
+
+      <!-- Loader state -->
+      <div id="loader">
+      <img src="./assets/image/Verificapture Logo.jpg" alt="Loading..." />
+      </div>
+      
       <a href="./login.html" class="back-link"><img class="back-arrow-img3" src="./assets/image/back arrow.png" alt="back arrow">BACK TO LOGIN</a>
       
     </div>

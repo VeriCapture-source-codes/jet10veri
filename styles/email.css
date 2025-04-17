@@ -139,3 +139,22 @@ body, html {
   .back-link:hover{
     text-decoration: underline;
   } 
+
+  /* Load styles */
+  #loader {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    background: #fff;
+  }
+
+  #loader img{
+    width: 80px;
+    height: 80px;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

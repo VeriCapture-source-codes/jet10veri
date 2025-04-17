@@ -8,7 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const country = document.querySelector(".select-box2 select");
   const termsCheckbox = document.getElementById("checkbox2");
   const passwordToggle = document.getElementById("bx-hide2");
-  const apiUrl = "https://localhost:5000/api/v1/users/create-form";
+  const loader = document.getElementById("loader")
+  const apiUrl = "https://localhost:5000/api/v1/users/register";
 
   function showError(input, message) {
     input.style.border = "2px solid red";
@@ -77,6 +78,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!valid) return;
 
+  // Show loading state
+    document.body.classList.add("loading");
+    if (loader) loader.style.display = "block";
+
     // Prepare form data
     const formData = {
       firstName: firstName.value.trim(),
@@ -97,13 +102,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const result = await response.json();
       if (response.ok) {
-        alert("Signup successful!");
+        alert("Signup successful! Redirecting to login page...");
         form.reset();
+        
+        // Redirect to login page after 5 seconds
+        setTimeout(() => {
+          window.location.href = "/login.html"; 
+        }, 5000);
+      
       } else {
         alert("Error: " + (result.message || "Signup failed"));
       }
+      
     } catch (error) {
       alert("Network error: Could not reach the server");
     }
+    
+    finally {
+        // Hide loading state
+        document.body.classList.remove("loading");
+        if (loader) loader.style.display = "none";
+      }
   });
 });

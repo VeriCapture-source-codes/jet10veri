@@ -4,12 +4,21 @@ document.addEventListener("DOMContentLoaded", async () => {
     const otpInputs = document.querySelectorAll(".otp-input input");
     const verifyButton = document.querySelector(".verify-btn");
     const resendText = document.querySelector(".resend-text");
+    const loader = document.getElementById("loader"); 
 
     let userEmail = localStorage.getItem("userEmail") || "";
     let countdownTimer;
 
+    function toggleLoader(show = true) {
+        if (loader) {
+          loader.style.display = show ? "block" : "none";
+          document.body.classList.toggle("loading", show);
+        }
+      }
+
     
     async function fetchUserEmail() {
+        toggleLoader(true)
         if (!userEmail) {
             try {
                 const response = await fetch("https://localhost:5000/api/v1/users/reset-password");
@@ -29,6 +38,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             emailText.textContent = maskEmail(userEmail);
             startCountdown();
         }
+        toggleLoader(false)
     }
 
     function maskEmail(email) {
@@ -78,8 +88,9 @@ document.addEventListener("DOMContentLoaded", async () => {
             alert("Please enter a valid 6-digit OTP.");
             return;
         }
-
-        try {
+       toggleLoader(true)
+        
+       try {
             const response = await fetch("https://localhost:5000/api/v1/users/reset-password", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
@@ -89,9 +100,11 @@ document.addEventListener("DOMContentLoaded", async () => {
             const result = await response.json();
 
             if (result.success) {
-                alert("OTP Verified Successfully!");
+                const successMessage = document.getElementById("success-message");
+                successMessage.textContent = "OTP Verified Successfully!";
+                successMessage.style.display = "block";
                 localStorage.removeItem("userEmail"); 
-                window.location.href = "dashboard.html";
+                window.location.href = "/ResetPassword.html";
             } else {
                 alert(result.message || "Invalid OTP. Please try again.");
             }
@@ -104,7 +117,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         event.preventDefault();
 
         if (!userEmail) {
-            alert("Email not found. Please reload the page.");
+            const successMessage = document.getElementById("error-message");
+            successMessage.textContent = "Email not found, please enter your email.";
+            successMessage.style.display = "block";
             return;
         }
 
