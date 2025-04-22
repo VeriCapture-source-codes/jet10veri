@@ -11,7 +11,7 @@
   list-style: none;
 }
 /* Add this to your CSS */
-body, html {
+body {
   width: 100%;
   min-width: 100%;
   overflow-x: hidden; /* Prevents horizontal scrolling */
@@ -28,7 +28,7 @@ body, html {
   top: 0;
   right: 0px;
   width: 100%;
-  height: 18vh;
+  height: 17vh;
   z-index: 1000;
   background-color: #ffffff;
   transition: 0.5s;
@@ -37,7 +37,7 @@ body, html {
 .logo img {
   display: flex;
   width: 12rem;
-  height: 3.5rem;
+  height: 3rem;
   margin-top: 20px;
   margin-left: 32px;
 }
@@ -715,7 +715,7 @@ h2.what-offer{
     margin: 0;
     padding: 0;
   }
-  body, html {
+  body {
     width: 100%;
     min-width: 100%;
     overflow-x: hidden; /* Prevents horizontal scrolling */
@@ -734,9 +734,10 @@ h2.what-offer{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 5% !important; /* Adds comfortable side padding */
+    padding: 10px 10% !important; /* Adds comfortable side padding */
     max-width: 100% !important;
     width: 100% !important;
+    height: 30px !important;
     position: fixed;
     top: 0;
     left: 0;
@@ -776,8 +777,8 @@ h2.what-offer{
   }
   /* Display the menu icon (hamburger) on mobile */
   .menu-icon {
-    display: block;
-    font-size: 24px;
+    display: block !important;
+    font-size: 22px !important;
     cursor: pointer;
   }
   /* Adjust logo size for smaller screens */

@@ -56,8 +56,7 @@
             <!-- Login Form with Google and Facebook -->
             <form
               action="http://localhost:5000/api/v1/users/login"
-              method="POST"
-            >
+              method="POST">
               <div class="media-options">
                 <a href="#" class="field google">
                   <i class="fab fa-google fa-1x google-icon"></i>
@@ -96,31 +95,34 @@
                 </ul>
               </div>
               <div id="line"></div>
-              <div class="field input-field">
-                <input
-                  type="email"
-                  placeholder="Email or Username"
-                  id="input"
-                  name="email"
-                  autocomplete="Email or username"
-                />
+              <div class="field">
+                <div class="input-field">
+                  <input 
+                    type="email"
+                    placeholder="Email or Username"
+                    class="form-input"
+                    name="email"
+                    autocomplete="username"
+                  />
+                </div>
+              
+                <div class="input-field password-container">
+                  <input
+                    type="password"
+                    placeholder="Password"
+                    class="form-input"
+                    id="password"
+                    name="password"
+                    autocomplete="current-password"
+                  />
+                  <img
+                    src="./assets/image/bx-hide.png"
+                    id="bx-hide"  
+                    class="toggle-password"
+                    alt="toggle visibility"
+                  />
+                </div>
               </div>
-
-              <div class="field input-field">
-                <input
-                  type="password"
-                  placeholder="Password"
-                  id="password"
-                  name="password"
-                  autocomplete="current-password"
-                />
-                <img
-                  src="./assets/image/bx-hide.png"
-                  id="bx-hide"
-                  alt="toggle visibility"
-                />
-              </div>
-
               <!-- Forgot Password link -->
               <div class="form-link">
                 <input type="checkbox" id="checkbox" />
@@ -142,26 +144,28 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        let bx_hides = document.querySelectorAll("#bx-hide, #bx-hide2");
-        let passwords = document.querySelectorAll("#password, #password2");
+  const bx_hides = document.querySelectorAll("#bx-hide"); 
+  const passwords = document.querySelectorAll("#password"); 
 
-        if (bx_hides.length === 0 || passwords.length === 0) {
-          console.error("Elements not found. Check your IDs.");
-        }
+  if (bx_hides.length === 0 || passwords.length === 0) {
+    console.error("Elements not found. Check your selectors.");
+    return;
+  }
 
-        bx_hides.forEach((bx_hide, index) => {
-          bx_hide.onclick = function () {
-            let password = passwords[index];
-            if (password.type === "password") {
-              password.type = "text";
-              bx_hide.src = "assets/image/bx-show.png";
-            } else {
-              password.type = "password";
-              bx_hide.src = "assets/image/bx-hide.png";
-            }
-          };
-        });
-      });
+  bx_hides.forEach((bx_hide, index) => {
+    bx_hide.addEventListener("click", function () {
+      const password = passwords[index];
+      
+      if (password.type === "password") {
+        password.type = "text";
+        bx_hide.src = "assets/image/bx-show.png"; // Show open eye icon
+      } else {
+        password.type = "password";
+        bx_hide.src = "assets/image/bx-hide.png"; // Show closed eye icon
+      }
+    });
+  });
+});
 
       document.addEventListener("DOMContentLoaded", function () {
         // Elements

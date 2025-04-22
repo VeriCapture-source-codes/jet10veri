@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Current user data (in a real app, this would come from your backend/database)
     let currentUser = {
-        image: "./assets/image/Ellipse 1.png" // Default image path
+        image: "./assets/image/Rectangle 28.png" // Default image path
     };
     
     // Function to update all profile images
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Update current user data
         currentUser.image = newImageSrc;
         
-        // In a real app, you would save this to your backend here
+        
         // saveToBackend(currentUser);
     }
     
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize all images with the current user's image
     updateProfileImages(currentUser.image);
     
-    // If you have a button to change the image (like in your profile page)
+    // button to change the image (like in your profile page)
     const changeImageBtn = document.querySelector('.change-image-btn');
     if (changeImageBtn) {
         changeImageBtn.addEventListener('click', function() {
@@ -98,7 +98,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Contact info elements
     const email = document.getElementById('email');
-    const phone = document.getElementById('phone');
     const gender = document.getElementById('gender');
     
     // Address elements
@@ -111,7 +110,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const editMiddleName = document.getElementById('edit-middle-name');
     const editLastName = document.getElementById('edit-last-name');
     const editEmail = document.getElementById('edit-email');
-    const editPhone = document.getElementById('edit-phone');
     const editGender = document.getElementById('edit-gender');
     const editCountry = document.getElementById('edit-country');
     const editState = document.getElementById('edit-state');
@@ -119,16 +117,15 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Current user data
     let currentUser = {
-        firstName: "Valentine",
-        middleName: "Anthony",
-        lastName: "Emeka",
+        firstName: "",
+        middleName: "",
+        lastName: "",
         image: "https://via.placeholder.com/80",
-        email: "Valentine68@gmail.com",
-        phone: "+23481234567",
-        gender: "Male",
-        country: "Nigeria",
-        state: "Lagos",
-        town: "Oshodi"
+        email: "",
+        gender: "",
+        country: "",
+        state: "",
+        town: ""
     };
     
     // Initialize the profile
@@ -142,7 +139,6 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Set contact info
         email.textContent = currentUser.email;
-        phone.textContent = currentUser.phone;
         gender.textContent = currentUser.gender;
         
         // Set address
@@ -178,7 +174,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     editContactBtn.addEventListener('click', () => {
         editEmail.value = currentUser.email;
-        editPhone.value = currentUser.phone;
         editGender.value = currentUser.gender;
         editContactModal.style.display = 'flex';
     });
@@ -272,11 +267,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Save contact info changes
     saveContactBtn.addEventListener('click', () => {
         currentUser.email = editEmail.value || currentUser.email;
-        currentUser.phone = editPhone.value || currentUser.phone;
         currentUser.gender = editGender.value || currentUser.gender;
         
         email.textContent = currentUser.email;
-        phone.textContent = currentUser.phone;
         gender.textContent = currentUser.gender;
         
         editContactModal.style.display = 'none';

@@ -24,37 +24,50 @@
 #nav2 {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: 0 !important;
+  width: 100vw !important;
   height: 18vh;
   z-index: 1000;
   background-color: #ffffff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  transition: 0.5s;
   margin: 0;
   padding: 0;
 }
-
-.nav-list {
+/* Logo and Items */
+ .logo2 {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100%;
-  padding: 0 20px;
-  margin: 0;
-  list-style: none;
-}
-  /* Logo and Items */
-.logo2 {
+  position: relative;
   width: 12rem;
   height: 3.5rem;
-  top: 20px;
-  right: 0;
+  top: 30px !important;
+  right: 4rem !important;
   transition: all 0.3s ease;
 }
+.nav-list {
+  display: flex;
+  position: fixed;
+  top: 10px !important;
+  right: -2px !important;
+  width: 100% !important;
+  height: 13% !important;
+  padding: 30px 50% !important; /* Adds comfortable side padding */
+}
+.nav-list li {
+  list-style: none;
+  padding: 12px 0;
+  text-align: center;
+}
+.nav-list li a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 16px;
+}
 
+.nav-list li a:hover{
+  color: #34f8bd;
+  text-decoration: underline;
+}
   .veri {
-   margin: 0 auto; 
+   background-color: none;
   }
   
   .dark-mode-label4 {
@@ -65,8 +78,9 @@
     position: absolute;
     background-color: #ffffff;
     border-radius: 50%;
-    top: -35px;
+    top: -37px;
     right: 0;
+    left: 74%;
     cursor: pointer;
   }
   
@@ -82,10 +96,23 @@
     border: 2px solid #f0f0f0;
     background-color: #f3f0ef;
     position: absolute;
-    top: 25px;
-    right: 15px;
+    top: 33px;
+    right: 20px;
   }
-  
+  .menu-toggle {
+    top: 25px;
+    left: 20px;
+    z-index: 1002; /* slightly higher than nav bar */
+  }
+  /* Hide the checkbox by default */
+  .menu-toggle-checkbox {
+    display: none;
+  }
+  .menu-icon {
+    display: none; /* Hide menu icon on desktop */
+    font-size: 1.5em;
+    cursor: pointer;
+  }
   /* Sidebar Positioning */
 .sidebar {
   position: fixed;
@@ -100,46 +127,6 @@
   
   .sidebar.active {
     left: 0;
-  }
-  
-  .sidebar-header {
-    display: flex;
-    align-items: center;
-  }
-  
-  .ellipse-img4 {
-    display: block;
-    width: 2rem;
-    height: 2rem;
-    margin: 0 auto 15px auto;
-  }
-  
-  .stephen-ned {
-    position: absolute;
-    font-size: 12px;
-    font-weight: 800;
-    color: #000000;
-    vertical-align: middle;
-    top: 3.5%;
-    right: 43px;
-    left: 0px;
-  }
-  
-  .anambra {
-    position: relative;
-    left: 4px;
-    font-size: 12px;
-    font-weight: 800;
-    color: #000000;
-    text-decoration: none;
-    text-align: left;
-    width: fit-content;
-  }
-  
-  .front-arrow {
-    width: 15%;
-    height: 15%;
-    margin: 0 auto 10px 75px;
   }
   
   /* Menu List */
@@ -183,10 +170,10 @@
     background-color: white;
     border-radius: 10px;
     padding: 20px;
-    margin-bottom: 0px;
+    margin-bottom: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     max-width: calc(100% - 40px);
-    margin: 120px 18px 0 0;
+    margin-right: 20px;
   }
   
   .profile-container label {
@@ -208,7 +195,7 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 15px;
-    background-color: #f9f9f9;
+    background-color: #f1efef;
     border-radius: 8px;
   }
   
@@ -228,8 +215,8 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    background-color: #4CAF50;
-    color: white;
+    background-color: #4dfac6;
+    color: auto;
     border: none;
     width: 30px;
     height: 30px;
@@ -267,25 +254,26 @@
   }
   
   .edit-name-btn {
-    background-color: #f0f0f0;
+    background-color: #4dfac6;
     border: none;
-    padding: 5px 10px;
+    padding: 7px 12px;
     border-radius: 4px;
+    color: auto;
     cursor: pointer;
     font-size: 0.8rem;
-    margin-left: 10px;
+    margin-left: 380px;
   }
   
   /* Edit Containers */
   .edit-container, .edit-container2 {
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     position: relative;
   }
   
   table {
     width: 100%;
     border-collapse: collapse;
-    background-color: #f9f9f9;
+    background-color: #f1efef;
     border-radius: 8px;
     overflow: hidden;
   }
@@ -307,8 +295,8 @@
   }
   
   .section-edit-btn {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #4dfac6;
+    color: auto;
     border: none;
     padding: 8px 15px;
     border-radius: 4px;
@@ -319,6 +307,7 @@
     justify-content: center;
     width: 100%;
     margin-top: 10px;
+    margin-right: 220px;
   }
   
   .section-edit-btn i {
@@ -501,7 +490,38 @@
   /* Mobile View - Sidebar Hidden */
 @media (max-width: 767px) {
   #nav2 {
-    height: 15vh; /* Slightly smaller on mobile */
+    height: 17vh; /* Slightly smaller on mobile */
+  }
+   .logo2{
+   position: absolute;
+   top: 15% !important;
+   left: 10px; 
+  }
+  .nav-list {
+    display: none; /* Hide by default */
+    position: fixed;
+    top: 113px !important;
+    left: 0px !important;
+    width: 100% !important;
+    height: 40% !important;
+    background-color: #fff !important;
+    padding: 30px 50% !important; /* Adds comfortable side padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .nav-list li {
+    list-style: none;
+    padding: 12px 0;
+    border-bottom: 1px solid #b6b6b6; 
+    text-align: center;
+  }
+  .nav-list li a {
+    text-decoration: underline;
+    color: #000000;
+    font-size: 16px;
+  }
+  
+  .nav-list li a:hover{
+    color: #52fcc3;
   }
   .sidebar {
     top: 100px;
@@ -512,45 +532,59 @@
   .sidebar.active {
     transform: translateX(0);
   }
-  .stephen-ned {
-    position: absolute;
-    font-size: 16px;
-    line-height: 1.6;
-    top: 2.5%;
-    left: 22px;
-  }
-  .anambra {
-    display: flex;
-    position: relative;
-    top: 3px;
-    left: 10px;
-    font-size: 13px;
-  }
-  .front-arrow {
-    margin-top: 10px;
-  }
+ 
   .profile-container {
     margin-left: 20px;
-    margin-top: 105px;
+    margin-top: 125px;
     margin-bottom: 10px;
   }
   .menu-toggle {
     display: block; /* Show menu toggle on mobile */
-    margin-left: 185px;
-    margin-top: 30px;
+    margin-left: 5px;
+    margin-top: 55px;
+    padding: 1px 2px;
+  }
+
+  /* Show nav-links when checkbox is checked */
+  .menu-toggle-checkbox:checked ~ .nav-list {
+    display: block;
+  }
+  /* Display the menu icon (hamburger) on mobile */
+  .menu-icon {
+    display: block;
+    font-size: 54px;
+    cursor: pointer;
+    margin-left: 290px;
+    margin-top: 0px;
   }
     .veri {
       font-size: 1.2rem;
-      margin: 0 10px;
+      position: absolute;
+      top: 40%;
+      left: 0;
+      right: 0;
+    }
+    .veri:hover {
+      color: #34f8bd;
+      text-decoration: underline;
     }
     
     #dark-mode-toggle4 {
-      margin: -30px 24px;
+      position: absolute;
+      top: 37px;
+      right: 0;
+      left: 47%;
+      cursor: pointer;
     }
     .ellipse-img{
       position: absolute;
-      top: 48px;
-      right: 10px;
+      top: 70%;
+      left: 170px;
+      right: 0px;
+    }
+    .edit-name-btn{
+      margin-left: 0px;
+      margin-top: 10px;
     }
   }
   /* Tablet (768px and up) */
@@ -563,12 +597,35 @@
       .nav-list {
         padding: 0 40px;
       }
-      .veri{
+      .nav-list li {
+        list-style: none;
+        padding: 12px 0;
+        text-align: center;
+      }
+      .nav-list li a {
+        text-decoration: none;
+        color: #000000;
+        font-size: 16px;
+      }
+      
+      .nav-list li a:hover{
+        color: #34f8bd !important;
+        text-decoration: underline !important;
+        cursor: pointer !important;
+      }
+      .veri a{
         font: 15px;
       }
-      .logo2 {
-        margin-right: 40px;
+      .veri a:hover{
+        color: #34f8bd !important;
+        text-decoration: underline !important;
+        cursor: pointer !important;
       }
+      .logo2{
+        position: absolute;
+        top: 15% !important;
+        left: 15px; 
+       }
      .dark-mode-label4{
       display: block;
      }
@@ -576,19 +633,19 @@
       margin-top: 80px;
       margin-right: 0px;
      }
-     .stephen-ned{
-      top: 17px;
-      right: 0;
-      font-size: 14px;
-     }
+     .menu-toggle {
+      display: block; /* Show menu toggle on mobile */
+      margin-left: 55px !important;
+      margin-top: 6px;
+      padding: 3px 5px;
+    }
     .profile-container {
       max-width: calc(100% - 300px);
       height: 51rem;
       margin-left: 280px;
-      margin-top: 118px;
+      margin-top: 128px;
     }
-  
-    .content {
+     .content {
       flex-direction: row;
       align-items: center;
     }
@@ -609,10 +666,15 @@
     }
     
     .section-edit-btn {
-      width: auto;
+      display: flex;
+      width: 20%;
       margin-top: 0;
+      margin-left: 0px;
     }
-  
+   #edit-name-btn {
+    margin-left: 30px;
+    margin-top: 0px;
+  }
     th, td {
       display: table-cell;
       width: auto;
