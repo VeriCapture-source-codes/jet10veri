@@ -1,0 +1,78 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/explore.css" />
+<link rel="icon" href="./assets/image/vericapture favicon.png">
+<title>News Feed</title>
+</head>
+<body>
+
+  <!-- Logo section -->
+   <div class="logo">
+    <img src="./assets/image/Data For  Vericapture 2.png" alt="img">
+   </div>
+ 
+  <div class="container">
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+      <ul>
+        <li class="active"><a href="explore.html"> <img src="./assets/image/House.png" alt="home"> Home</a></li>
+        <li><a href="notifications.html"><img src="./assets/image/notification.png" alt="notification"> Notifications</a></li>   
+        <li><a href="explore.html"><img src="./assets/image/Explore.png" alt="explore"> Explore</a></li>
+        <li><a href="profile.html"><img src="./assets/image/user.png" alt="profile"> Profile</a></li>
+        <li><a href="settings.html"><img src="./assets/image/Gear.png" alt="settings"> Settings</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <header class="header">
+      <h1>Reels</h1>
+         <!-- Go Live Button -->
+      <button id="goLiveBtn">Go Live</button>
+      </header>
+     
+
+      <!-- Camera Stream Section -->
+      <section id="cameraSection" class="hidden">
+        <video id="video" autoplay></video>
+        <button id="captureBtn">Capture</button>
+      </section>
+
+      <!-- Upload Section: Preview, Caption, Category -->
+      <section id="uploadSection" class="hidden">
+        <img id="preview" alt="Preview"/>
+        <input type="text" id="caption" placeholder="Write a caption..."/>
+        <select id="category">
+          <option value="crime">Crime</option>
+          <option value="riot">Riot</option>
+          <option value="traffic">Traffic</option>
+        </select>
+        <button id="postBtn">Post</button>
+      </section>
+
+      <!-- Success Message -->
+      <div id="successMessage" class="hidden">Post created successfully!</div>
+
+      <!-- Posts Container -->
+      <div id="postsContainer"></div>
+    </main>
+  </div>
+
+  <!-- External Script -->
+   <script>
+    window.CLOUDINARY = {
+    CLOUDINARY_CLOUD_NAME: 'dk4pbv05b',
+    CLOUDINARY_UPLOAD_PRESET: 'ml_default'
+};
+   </script>
+  
+  <script src="scripts/explore.js"></script>
+</body>
+</html>
