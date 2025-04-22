@@ -11,188 +11,128 @@
   list-style: none;
 }
 /* Add this to your CSS */
-body, html {
+body{
   width: 100%;
   min-width: 100%;
   overflow-x: hidden; /* Prevents horizontal scrolling */
   font-family: "Open Sans", sans-serif;
-  background-color: #e7e7e7;
+  background-color: #e7e7e7; 
   color: #333;
   text-align: center;
   line-height: 1.6;
 }
-
 #container-forms {
-    height: 63rem;
-    width: 83rem;
-    margin-left: 15px;
-    margin-bottom: 0px;
-    border: 1px solid #62c6f5c5;
-    margin-top: 13px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #ffffff;
-  }
-  #form-content {
-    margin-top: 0px;
-    margin-left: 0px;
-  }
-   #logo{
-    width: 30%;
-    height: auto;
-    margin-left: 5px;
-    margin-top: 80px;
-    transition: opacity 0.3s ease;
-  }
-  #dark-mode-toggle2 {
-    align-items: center;
-    justify-content: center;
-    background-color: #ffffff;
-    border-radius: 50%;
-    margin-top: 100px;
-    margin-left: 120px;
-    margin-bottom: 0px;
-    cursor: pointer;
-  }
-   a.closse {
-    position: absolute;  
-    font-size: 15px;
-    font-weight: 800;
-    color: #000;
-    cursor: pointer;
-    left: 480px;
-    top: 100px;
-    text-decoration: none;
-  }
-  .header-welcome{
-    font-size: 50px;
-    font-weight: 600;
-    margin-top: 50px;
-    margin-left: -50px;
-  }
-  p.welcome{
-    margin-left: -45px;
-  }
+  height: auto;
+  width: 100%;
+  max-width: 83rem;
+  margin: 13px auto;
+  border: 1px solid #62c6f5c5;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 20px 0;
+}
+
+#form-content {
+  margin-top: 0px;
+  margin-left: 0px;
+}
+
+#logo {
+  width: 30%;
+  max-width: 200px;
+  height: auto;
+  margin: 80px 0px 0;
+  transition: opacity 0.3s ease;
+  display: block;
+}
+
+#dark-mode-toggle2 {
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 50%;
+  margin: 0 auto 0 318px;
+  cursor: pointer;
+  display: block;
+}
+a.closse {
+  position: absolute;
+  font-size: 15px;
+  font-weight: 800;
+  color: #000;
+  cursor: pointer;
+  right: 120px;
+  top: 95px;
+  text-decoration: none;
+}
+a.closse:hover {
+  text-decoration: underline;
+}
+.header-welcome {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 50px;
+  margin-right: 50px;
+  margin-bottom: 10px;
+}
+
+p.welcome {
+  margin-bottom: 30px;
+  margin-right: 50px;
+}
   .form-img {
     float: right; 
-    margin-left: 670px;
+    margin-left: 660px;
     width: 39.5rem;
     height: 61rem;
     object-fit: cover;
     margin-top: 2px;
     border-radius: 5px;
   }
-   .form {
+  .form {
     display: flex;
     position: relative;
-    height: 10rem;
-    width: 288.5rem;
+    height: auto;
+    width: 100%;
     border-radius: 6px;
     background: #ffffff;
-    margin-top: 0px;
-    margin-left: 0px;
+    margin: 0 auto;
     transition: background-color 0.3s ease, color 0.3s ease;
+    flex-direction: column;
   }
-  .form-content-left{
+  .form-content-left {
     position: absolute;
     max-width: 100%;
-    margin-top: -80px;
-    margin-left: 0px;
+    margin: -80px auto 0;
+    padding: 0 20px;
   }
-  .logo-container{
+  .logo-container {
     display: flex;
+    flex-direction: column;
     margin-top: 0px;
     margin-left: 0px;
-  }
-   .field {
     position: relative;
-    top: 50px;
-    padding: 1px 20px;
-    border-radius: 6px;
-    cursor: pointer;
   }
-  .input-field{
-    position: relative;
-    padding: 8px 10px;
-    border-radius: 8px;
-    top: 60px;
-    right: 30px;
-    cursor: pointer;
-  }
-  
-  input{
-    outline: none;
-    padding: 0px 5px;
-    border: none;
-    text-indent: 5px;
-    margin-left: 18px;
-    margin-top: 25px;
-    width: 27.8rem;
-    height: 4.5rem;
-    cursor: pointer;
-    border: 1px solid#CACACA;
-    border-radius: 6px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  input:hover{
-    background: #e6e4e4;
-    border: 1px solid rgba(0, 255, 64, 0.74);
-    outline: none;
-  }
-  .input-field #password{
-    position: relative;
-    top: -15px;
-    left: 0px;
-    width: 27.8rem;
-    height: 4.5rem;
-    outline: none;
-    border: 1px solid#CACACA;
-  }
-  .input-field #password:focus{
-    cursor: pointer;
-  }
-  .input-field #password:hover{
-    border: 1px solid rgba(0, 255, 64, 0.74);
-  }
-   #bx-hide {
-    width: 38px;
-    height: 38px;
-    position: absolute;
-    top: 35px;
-    right: 150px;
-    font-size: 18px;
-    color: #000000;
-    cursor: pointer;
-    padding: 5px;
-  }
-  .submit-button{
-    width: 27.3rem;
-    height: 4.5rem;
-    border: none;
-    border-radius: 6px;
-    background: auto;
-    color: auto;
-    border: 1px solid#CACACA;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  }
-  .button-field{
-    margin-left: -40px;
-    margin-top: 20px;
-    font-size: 15px; 
-  }
-  .button-field:focus{
-    background: #e6e4e4;
-  }
-  .button-field button:hover{
-    background: #e6e4e4;
-    border: 1px solid rgba(0, 255, 64, 0.74);
-    outline: none;
-  }
-   
-  .fa-google {
-    background: linear-gradient(to bottom left, transparent 49%, #fbbc05 50%) 0
+
+  .media-options {
+    display: flex;
+    margin: 0 35px;
+   }
+   .media-options a {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     max-width: 100%;
+     width: 27.8rem;
+     height: 4.5rem;
+     margin-left: 86px;
+     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+   }
+    .fa-google {
+      background: linear-gradient(to bottom left, transparent 49%, #fbbc05 50%) 0
       25%/48% 40%,
       linear-gradient(to top left, transparent 49%, #fbbc05 50%) 0 75%/48% 40%,
       linear-gradient(-40deg, transparent 53%, #ea4335 54%),
@@ -203,24 +143,14 @@ body, html {
     color: transparent;
     -webkit-text-fill-color: transparent;
   }
-  .media-options {
-    display: flex;
-   margin: 0 35px;
-  }
-  .media-options a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 100%;
-    width: 27.8rem;
-    height: 4.5rem;
-    margin-left: 86px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  a.google {
+ 
+   .google {
     color: #000000;
     border: 1px solid#CACACA;
     background-color: #ffffff;
+    position: absolute;
+    right: 185px;
+    top: 25%;
   }
   .google:hover{
     background: #e6e4e4;
@@ -245,24 +175,43 @@ body, html {
     margin-left: 10px;
     color: #363636;
   }
-  .options i.bx{
-    font-size: 23px;
-    margin-left: 5px;
-    margin-top: 2cqmax;
-  }
+
   .options{
     position: relative;
     width: 38rem;
     border-radius: 4px;
-    margin-top: 35px;
-    margin-left: 122px;
+    margin-top: 70px;
+    margin-left: 110px;
+    margin-right: 2px;
     align-items: center;
     display: flex;
-    gap: 5px;
+    gap: 7px;
+  }
+
+  .options i.bx{
+    font-size: 23px;
+    margin-left: 5px;
+    margin-top: 20px;
+  }
+  .option{
+    width: 13.7rem;
+    height: 4.5rem;
+    align-items: center;
+    border-radius: 6px;
+    margin-top: 0px;
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid#CACACA;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
   .option:focus{
     background: #e6e4e4;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  }
+  .option:hover{
+    background: #e6e4e4;
+    border: 1px solid rgba(0, 255, 64, 0.74);
+    outline: none;
   }
   .x-image{
     height: 18px;
@@ -273,28 +222,60 @@ body, html {
     display: flex;
     align-items: center;
   }
-   .option{
-    width: 13.7rem;
+  
+  .field {
+    width: 100%;
+    max-width: 28rem;
+    margin-top: 90px;
+    margin-left: 110px;
+    padding: 10px 0;
+  }
+  
+  .input-field {
+    position: relative;
+    margin-bottom: 15px;
+  }
+  
+  .form-input {
+    width: 100%;
     height: 4.5rem;
-    align-items: center;
+    padding: 0 15px;
+    border: 1px solid #CACACA;
     border-radius: 6px;
-    margin-top: 40px;
-    cursor: pointer;
-    background: #fff;
-    border: 1px solid#CACACA;
+    font-size: 1rem;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
   }
-  .option:hover{
-    background: #e6e4e4;
-    border: 1px solid rgba(0, 255, 64, 0.74);
+  .form-input:focus {
+    border-color: rgba(0, 255, 64, 0.74);
     outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 255, 64, 0.2);
   }
+  .form-input:hover {
+    background: #e6e4e4;
+    border-color: rgba(0, 255, 64, 0.74);
+  }
+  
+  .password-container {
+    position: relative;
+  }
+  
+  .toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+ 
   #line {
     position: relative;
     height: 1px;
     width: 55%;
     top: 20px;
-    left:  159px;
+    left:  155px;
     background-color: #000;
   }
   #line::after {
@@ -327,26 +308,24 @@ body, html {
     right: 0px;
   }
   
-  input#checkbox{
+  #checkbox{
     width: 20px;
     height: 20px;
-    margin-top: 70px;
-    margin-left: -46px;
+    margin-top: 0px;
+    margin-right: 195px;
   }
-  .form-link,
+  
   .keep {
     position: relative;
-    left: 0px;
+    right: 193px;
     top: -4px;
-    margin-left: 2px;
-    margin-top: 0px;
     font-size: 15px;
     font-weight: 600;
   }
    a.forgot-pass {
     position: relative;
-    top: -3px;
-    margin-left: 135px;
+    top: -4px;
+    right: 48px;
     font-size: 15px;
     font-weight: 600;
     color: #7bffde;
@@ -358,254 +337,223 @@ body, html {
     text-decoration: underline;
   }
 
+  .button-field{
+    margin-right: 45px;
+    margin-top: 30px;
+    font-size: 15px; 
+  }
+  .submit-button{
+    width: 27.8rem;
+    height: 4.5rem;
+    border: none;
+    border-radius: 6px;
+    background: auto;
+    color: auto;
+    border: 1px solid#CACACA;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
 
-/* Mobile Devices */
-@media screen and (max-width: 600px) {
- #container-forms {
-    height: 52rem;
-    width: 97%;
-    margin-left: 6px;
-    margin-top: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .submit-button:focus{
+    background: #e6e4e4;
   }
-  .dark-mode-label2 {
-    display: flex;
-    margin-left: -220px;
-    margin-top: -40px;
-  }
-  #form-content {
-    margin-top: 0px;
-    margin-left: 0px;
-  }
-  .logo-container{
-    width: 32rem;
-    height: 1.8rem;
-    margin-top: 58px;
-    margin-left: 27px;
-  }
-   img#logo {
-    width: 35%;
-    height: 3rem;
-    margin-top: -5px;
-    margin-left: 0px;
-    margin-bottom: 20px;
-  }
-  .form-img {
-    float: left;
-    margin-left: 235px;
-    width: 12rem;
-    height: 51rem;
-    object-fit: cover;
-    margin-top: -80px;
-    border-radius: 0px 6px 6px 0px;
-  }
-  form {
-    height: 41.1rem;
-    width: 28rem;
-    border-radius: 6px;
-    margin-top: 25px;
-    margin-left: -8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  }
-  .form-content-left {
-    position: absolute;
-    max-width: 100%;
-    left: -10px;
-    top: 50px;
-  }
-  .header-welcome {
-    font-size: 26px;
-    font-weight: 600;
-    color: auto;
-    margin-left: -159px;
-    margin-top: 35px;
-  }
-   .logo-container .closse {
-    margin-top: 80px;
-    margin-left: 15px;
-    font-size: 16px;
-    font-weight: 600;
-    color: #000;
-    cursor: pointer;
-  }
-  .form-login{
-    margin-right: 25px;
-    margin-top: 80px;
-  }
-   p.welcome {
-    font-size: 16px;
-    color: auto;
-    text-align: left;
-    margin-top: 0px;
-    margin-left: 25px;
-    width: 50%;
-  }
-   .media-options {
-    display: flex;
-    margin-top: -90px;
-    margin-left: 0px;
-  }
-  a.google{
-    width: 49.8rem;
-    height: 3.5rem;
-    margin-left: 56px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  .google-text {
-    font-size: 12px;
-    color: #000;
-  }
-  .options i.bx{
-    font-size: 22px;
-    margin-left: 35px;
-    margin-top: 6px;
-  }
-  .x-image {
-    height: 20px;
-    width: 20px;
-    border-radius: 5px;
-    margin-top: 2px;
-    margin-left: 38px;
-    display: flex;
-    align-items: center;
-  }
-  .options {
-    position: relative;
-    border-radius: 4px;
-    top: 10px;
-    left: -87px;
-    align-items: center;
-    display: flex;
-  }
-  .options .option {
-    display: flex;
-    width: 5.9rem;
-    height: 3.5rem;
-    align-items: center;
-    border-radius: 6px;
-    margin-top: 20px;
-    cursor: pointer;
-    background: #fff;
-  }
-  .option:focus {
-    outline: none;
-  }
-  .option:hover {
+  .submit-button:hover{
     background: #e6e4e4;
     border: 1px solid rgba(0, 255, 64, 0.74);
     outline: none;
   }
-  #line {
-    display: flex;
-    position: relative;
-    height: 1px;
-    width: 35%;
-    left: 53px;
-    background: #000000;
+
+/* Mobile-specific adjustments */
+@media only screen and (max-width: 480px) {
+  * {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+  }
+  /* Add this to your CSS */
+  body{
+    width: 100% !important;
+    min-width: 100% !important;
+    overflow-x: hidden !important; /* Prevents horizontal scrolling */
+  }
+  #container-forms{
+    height: 138vh !important;
+    width: 99% !important;
+    margin: 0px 0px 0 2px!important;
+    border: 1px solid rgb(119, 154, 250) !important;
+    flex-direction: column !important;
+    padding: 20px 0 !important;
+  }
+  #form-content{
+    display: flex !important;
+  } 
+  .form-img img{
+    float: right !important; 
+    width: 23vw !important;
+    height: 150vh;
+    margin-top: 0px !important;
+    margin-left: 10px !important;
+    object-fit: cover !important;
+    border-radius: 0px 6px 6px 0px !important;
+  }
+  .logo-container{
+    margin: 0 auto !important;
+  }
+  #logo{
+    margin-top: 75px !important;
+    margin-right: 0px !important;
+    margin-left: 28px !important;
+  }
+  .dark-mode-label2{
+    margin: 0 auto !important;
+  }
+  #dark-mode-toggle2{
+    margin: 90px 120px !important;
+  }
+  a.closse{
+    position: absolute;
+    top: 5%;
+    left: 70.2% !important;
+    font-size: 15px;
+  }
+  .header-welcome {
+    position: absolute;
+    top: -2% !important;
+    font-size: 2rem;
+    width: 40%;
+    right: 0px;
+    left: 269px;
+    font-weight: 600;
+  }
+  p.welcome{
+  position: relative;
+  top: -80px;
+  right: 0px;
+  font-size: 17px;
+  width: 45%;
+}
+a.google{
+  width: 55% !important;
+  position: relative !important;
+  top: -90px !important;
+  left: 98px !important;
+}
+i.fab{
+  margin-left: 8px;
+}
+.google-text{
+  width: 100%;
+  font-size: 11px !important;
+  margin-right: 20px;
+}
+.select-btn{
+  display: flex !important;
+  position: relative;
+  top: -127px;
+}
+  .options {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  .option {
+    width: 44vw !important;
+    height: 9vh !important;
+    margin-top: 0px !important;
+    margin-left: 22px !important;
+  }
+  .x-image{
+    margin-left: 78px !important;
+    margin-top: 20px !important;
+  }
+  #line{
+    width: 36% !important;
+    margin-left: 37px !important;
+  }
+  #line::before {
+    content: "OR";
+    position: absolute;
+    top: -140px !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%);
+    padding: 0 5px;
+    background: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    color: auto;
+    z-index: 1;
   }
   #line::after {
     content: "";
     position: absolute;
     left: 0;
-    right: 0px;
-    top: 20px;
+    right: 0px !important;
+    top: -140px !important;
     color: auto;
     height: 2px;
     background-color: #000;
   }
-  #line::before {
-    content: "OR";
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    width: 30%;
-    transform: translate(-50%, -50%);
-    padding: 0 10px;
-    background: #fff;
-    font-size: 18px;
-    font-weight: 600;
-    color: black;
-    z-index: 1;
+  .field {
+   margin: 0 auto 0 20px !important;
+  
   }
-   form .field {
-    position: relative;
-    margin-left: 34px;
-    width: 45vw;
-    height: 3.8rem;
-    margin-top: 20px;
-    padding: 1px 20px;
-  }
-   #input {
-    outline: none;
-    margin-left: 10px;
-    width: 12.2rem;
-    margin-top: 0px;
-    font-size: 14px;
-    height: 3.6rem;
-    border-radius: 6px;
-  }
-  .field input:focus {
-    border-bottom-width: 2px;
-  }
-  .input-field #password{
-    margin-top: 0px;
-    font-size: 14px;
-    margin-left: 8px;
-    width: 12.2rem;
-    height: 3.5rem;
-  }
-  .input-field #bx-hide {
-    width: 38px;
-    height: 38px;
-    position: absolute;
-    top: -5px;
-    left: 180px;
-    font-size: 18px;
-    color: #000000;
-    cursor: pointer;
-    padding: 5px;
-  }
+ .input-field{
+  position: relative !important;
+  top: -130px;
+  right: 90px !important;
+ }
+ .form-input{
+  font-size: 16px !important;
+  width: 43vw !important;
+ }
+ .password-container {
+ position: relative;
+}
+.toggle-password {
+  position: absolute !important;
+  left: -35px !important;
+  top: -45% !important;
+  transform: translateY(-50%) !important;
+  width: 22px !important;
+  height: 22px !important;
+  cursor: pointer;
+}
   .form-link {
-    margin-top: 90px;
-    margin-right: 130px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
-  .form-link #checkbox {
-    position: absolute;
-    top: -85px;
-    left: 79px;
+#checkbox{
+    position: relative !important;
+    top: -160px !important;
+    left: 30px !important;
+    width: 20px !important;
+    height: 20px !important;
   }
-  .form-link .keep {
-    position: relative;
-    top: -16px;
-    left: -37px;
-    font-size: 13px;
-    width: 100%;
+.keep {
+    position: relative !important;
+    top: -190px !important;
+    left: 13px !important;
+    font-size: 13px !important;
   }
-   a.forgot-pass{
-    display: block;
-    position: relative;
-    width: 40rem;
-    font-size: 13px;
-    top: -20px;
-    left: -340px;
-    font-weight: 400;
-    color: #57f5c5;
+  a.forgot-pass {
+    position: relative !important;
+    top: -190px !important;
+    left: 60px !important;
   }
-  .button-field {
-   margin-top: -10px; 
-  }
-   .submit-button {
-    background: auto;
-    color: auto;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    width: 11.6rem;
-    height: 3.5rem;
-    font-size: 17px;
-    margin-left: -148px;
-  }
+.button-field{
+  position: relative !important;
+  top: -180px !important;
+  left: -37px !important;
+}
+.submit-button{
+  width: 57% !important;
+  height: 4.5rem !important;
+  margin-left: 0px !important;
+  margin-top: 0px !important;
+  font-size: 16px !important;
+  padding: 14px 20px !important;
+}  
 }
 
 /* Tablet Devices */
