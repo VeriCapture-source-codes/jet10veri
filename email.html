@@ -22,7 +22,7 @@
         <img class="email-icon" src="./assets/image/fa-solid_paper-plane.png" alt="email-icon">
       </div>
       <p class="email-text">We have sent a 6-digit code to the Email Address</p>
-      <form id="otp-form" action="https://localhost:5000/api/v1/users/reset-password" method="POST">
+      <form id="otp-form" action="http://localhost:5000/api/v1/users/reset-password" method="POST">
         <input type="hidden" name="email" id="user-email">
       
         <div class="otp-input">
@@ -48,5 +48,6 @@
       <a href="./login.html" class="back-link"><img class="back-arrow-img3" src="./assets/image/back arrow.png" alt="back arrow">BACK TO LOGIN</a>
       
     </div>
+    <script src="./scripts/email.js"></script>
 </body>
 </html>

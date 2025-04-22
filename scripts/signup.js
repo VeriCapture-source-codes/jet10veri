@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const termsCheckbox = document.getElementById("checkbox2");
   const passwordToggle = document.getElementById("bx-hide2");
   const loader = document.getElementById("loader")
-  const apiUrl = "https://localhost:5000/api/v1/users/register";
+  const apiUrl = "http://localhost:5000/api/v1/users/register";
 
   function showError(input, message) {
     input.style.border = "2px solid red";

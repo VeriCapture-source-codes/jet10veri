@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         toggleLoader(true)
         if (!userEmail) {
             try {
-                const response = await fetch("https://localhost:5000/api/v1/users/reset-password");
+                const response = await fetch("http://localhost:5000/api/v1/users/reset-password");
                 const data = await response.json();
 
                 if (data && data.email) {
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", async () => {
        toggleLoader(true)
         
        try {
-            const response = await fetch("https://localhost:5000/api/v1/users/reset-password", {
+            const response = await fetch("http://localhost:5000/api/v1/users/reset-password", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email: userEmail, otp: otpCode })
@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
 
         try {
-            const response = await fetch("https://localhost:5000/api/v1/users/reset-password", {
+            const response = await fetch("http://localhost:5000/api/v1/users/reset-password", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email: userEmail })

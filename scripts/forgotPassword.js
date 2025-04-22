@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (loader) loader.style.display = "block";
   
       try {
-        const response = await fetch("https://localhost:5000/api/v1/users/password-reset-otp", {
+        const response = await fetch("http://localhost:5000/api/v1/users/password-reset-otp", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
