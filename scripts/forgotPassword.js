@@ -53,8 +53,8 @@ document.addEventListener("DOMContentLoaded", () => {
            // Wait 5 seconds, then redirect
         
            setTimeout(() => {
-          window.location.href = "/email.html"; 
-        }, 5000);
+          window.location.href = "./email.html"; //route to the next page
+        }, 2000);
         
         } else {
           showAlert(result.message || "Failed to send reset email. Try again later.", false);

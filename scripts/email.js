@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 successMessage.textContent = "OTP Verified Successfully!";
                 successMessage.style.display = "block";
                 localStorage.removeItem("userEmail"); 
-                window.location.href = "/ResetPassword.html";
+                window.location.href = "./ResetPassword.html";
             } else {
                 alert(result.message || "Invalid OTP. Please try again.");
             }
